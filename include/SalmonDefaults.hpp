@@ -74,6 +74,7 @@ namespace defaults {
   constexpr const uint32_t numPreBurninFrags{5000};
   constexpr const bool useEM{false};
   constexpr const bool useVBOpt{true};
+    constexpr const bool useBoth{false};
   constexpr const uint32_t sigDigits{3};
   constexpr const uint32_t rangeFactorizationBins{4};
   constexpr const uint32_t numGibbsSamples{0};

@@ -763,6 +763,8 @@ bool GZipWriter::writeMeta(const SalmonOpts& opts, const ExpT& experiment, const
     std::string optType = "none";
     if (opts.useEM) {
       optType = "em";
+    } else if (opts.useBoth) {
+      optType = "ev";
     } else {
       optType = "vb";
     }
