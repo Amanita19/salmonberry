@@ -190,9 +190,13 @@ bool runPerCellEM(double& totalNumFrags, size_t numGenes,
       CellVBEMUpdate_(salmonEqclasses, alphas, priorAlphas, alphasPrime);
       CellEMUpdate_(salmonEqclasses, alphas, alphasPrime_a);
       uint64_t idx = 0;
-      for (float k, j : alphasPrime, alphasPrime_a) {
-        alphasPrime_b[idx] = (k + j) / 2;
+      auto it = alphasPrime.begin();
+      auto it_a = alphasPrime_a.begin();
+      while (it != alphasPrime.end() || it_a != alphasPrime_a.end()) {
+        alphasPrime_b[idx] = (*it + *it_a) / 2;
         idx++;
+        ++it_a;
+        ++it;
       } 
     } else if (useVBEM) {
       CellVBEMUpdate_(salmonEqclasses, alphas, priorAlphas, alphasPrime);
@@ -724,7 +728,7 @@ void optimizeCell(std::vector<std::string>& trueBarcodes,
                                    jointlog,
                                    initUniform,
                                    useVBEM,
-                                   useBoth);
+                                   salmon::defaults::useBoth);
         if( !isEMok ){
           jointlog->error("EM iteration for cell {} failed \n"
                           "Please Report this on github.", trueBarcodeStr);

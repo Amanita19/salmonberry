@@ -34,3 +34,14 @@
 /salmon_tutorial/quants
 
 *.fa.gz
+
+bin/*
+build/*
+external/*
+lib/*
+sample_data/*
+simulated_data/*
+test.err.*
+test.out.*
+tests/unitTests
+transcriptome/*
