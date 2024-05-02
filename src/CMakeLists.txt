@@ -233,6 +233,7 @@ if(TBB_RECONFIGURE OR TBB_TARGET_EXISTED)
 # Link the executable
 target_link_libraries(salmon
     Threads::Threads 
+    ${Boost_LIBRARIES}
     puffer 
     salmon_core
     twopaco

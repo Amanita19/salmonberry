@@ -29,6 +29,13 @@
 
 # Emacs save files
 *~
+
+/salmon_tutorial/athal_index
+/salmon_tutorial/data
+/salmon_tutorial/quants
+
+*.fa.gz
+
 bin/*
 build/*
 external/*

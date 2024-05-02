@@ -191,6 +191,9 @@ struct SalmonOpts {
 
   bool useVBOpt; // Use Variational Bayesian EM instead of "regular" EM in the
                  // batch passes
+
+  bool useBoth;
+  
   uint32_t sigDigits; // number of siginificant digits to print for EffectiveLength
                       // and NumReads
   bool useRangeFactorization{false}; // enable range factorization

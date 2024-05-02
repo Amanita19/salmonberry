@@ -757,6 +757,8 @@ namespace salmon {
        "Use the traditional EM algorithm for optimization in the batch passes.")
       ("useVBOpt", po::bool_switch(&(sopt.useVBOpt))->default_value(salmon::defaults::useVBOpt),
        "Use the Variational Bayesian EM [default]")
+       ("useBoth", po::bool_switch(&(sopt.useBoth))->default_value(salmon::defaults::useBoth),
+       "Use the Variational Bayesian EM [default] and the traditional EM algorithm")
       ("rangeFactorizationBins",
        po::value<uint32_t>(&(sopt.rangeFactorizationBins))->default_value(salmon::defaults::rangeFactorizationBins),
        "Factorizes the likelihood used in quantification by adopting a new "

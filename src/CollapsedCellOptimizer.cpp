@@ -78,6 +78,7 @@ void CellVBEMUpdate_(std::vector<SalmonEqClass>& eqVec,
         }// end-for groupsize
       }// end-if denom>0
     } else if (groupSize == 1){
+      // Howdy _ 
       alphaOut[genes.front()] += count;
     } else{
       std::cerr<<"0 Group size for salmonEqclasses in EM\n"
@@ -124,6 +125,7 @@ void CellEMUpdate_(std::vector<SalmonEqClass>& eqVec,
       }//end-if denom>0
     }//end-if boost gsize>1
     else if (groupSize == 1){
+      // Bonjour
       alphaOut[genes.front()] += count;
     } else{
       std::cerr<<"0 Group size for salmonEqclasses in EM\n"
@@ -146,13 +148,13 @@ double truncateAlphas(VecT& alphas, double cutoff) {
   }
   return alphaSum;
 }
-
+// change 
 bool runPerCellEM(double& totalNumFrags, size_t numGenes,
                   CollapsedCellOptimizer::SerialVecType& alphas,
                   const CollapsedCellOptimizer::SerialVecType& priorAlphas,
                   std::vector<SalmonEqClass>& salmonEqclasses,
                   std::shared_ptr<spdlog::logger>& jointlog,
-                  bool initUniform, bool useVBEM){
+                  bool initUniform, bool useVBEM, bool useBoth){
 
   // An EM termination criterion, adopted from Bray et al. 2016
   uint32_t minIter {50};
@@ -165,6 +167,8 @@ bool runPerCellEM(double& totalNumFrags, size_t numGenes,
     std::fill(alphas.begin(), alphas.end(), uniformPrior);
   }
   CollapsedCellOptimizer::SerialVecType alphasPrime(numGenes, 0.0);
+  CollapsedCellOptimizer::SerialVecType alphasPrime_a(numGenes, 0.0);
+  CollapsedCellOptimizer::SerialVecType alphasPrime_b(numGenes, 0.0);
 
   assert( numGenes == alphas.size() );
   for (size_t i = 0; i < numGenes; ++i) {
@@ -182,7 +186,19 @@ bool runPerCellEM(double& totalNumFrags, size_t numGenes,
   constexpr double minWeight = std::numeric_limits<double>::denorm_min();
 
   while (itNum < minIter or (itNum < maxIter and !converged)) {
-    if (useVBEM) {
+    if (useBoth) {
+      CellVBEMUpdate_(salmonEqclasses, alphas, priorAlphas, alphasPrime);
+      CellEMUpdate_(salmonEqclasses, alphas, alphasPrime_a);
+      uint64_t idx = 0;
+      auto it = alphasPrime.begin();
+      auto it_a = alphasPrime_a.begin();
+      while (it != alphasPrime.end() || it_a != alphasPrime_a.end()) {
+        alphasPrime_b[idx] = (*it + *it_a) / 2;
+        idx++;
+        ++it_a;
+        ++it;
+      } 
+    } else if (useVBEM) {
       CellVBEMUpdate_(salmonEqclasses, alphas, priorAlphas, alphasPrime);
     } else {
       CellEMUpdate_(salmonEqclasses, alphas, alphasPrime);
@@ -711,7 +727,8 @@ void optimizeCell(std::vector<std::string>& trueBarcodes,
                                    salmonEqclasses,
                                    jointlog,
                                    initUniform,
-                                   useVBEM);
+                                   useVBEM,
+                                   salmon::defaults::useBoth);
         if( !isEMok ){
           jointlog->error("EM iteration for cell {} failed \n"
                           "Please Report this on github.", trueBarcodeStr);

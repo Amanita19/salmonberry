@@ -63,7 +63,7 @@ bool runPerCellEM(double& totalNumFrags, size_t numGenes,
                   const CollapsedCellOptimizer::SerialVecType& priorAlphas,
                   std::vector<SalmonEqClass>& salmonEqclasses,
                   std::shared_ptr<spdlog::logger>& jointlog,
-                  bool initUniform, bool useVBEM);
+                  bool initUniform, bool useVBEM, bool useBoth);
 
 void optimizeCell(std::vector<std::string>& trueBarcodes,
                   const std::vector<std::vector<double>>& priorAlphas,
