@@ -46,3 +46,4 @@ test.err.*
 test.out.*
 tests/unitTests
 transcriptome/*
+sim_counts_matrix/
