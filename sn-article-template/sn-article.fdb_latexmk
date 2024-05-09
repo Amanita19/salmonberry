@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex sn-article"] 1715283441.9886 "sn-article.aux" "sn-article.bbl" "sn-article" 1715283479.60504 0
+["bibtex sn-article"] 0 "sn-article.aux" "sn-article.bbl" "sn-article" 1715283825.35888 -1
   "./sn-bibliography.bib" 1715282888.3878 5121 9bf5bccf9888e0437f92bc2f28a2235e ""
   "./sn-mathphys-num.bst" 1715282888.93955 64141 2560fd4f8e8321a304f732d035eb1b51 ""
-  "sn-article.aux" 1715283479.08545 6099 e439f504cfcf5d98a2d4406d46f99e97 "pdflatex"
+  "sn-article.aux" 1715283824.81539 6065 c3819826eed4c5664fc396dbd487b3b1 "pdflatex"
   (generated)
   "sn-article.bbl"
   "sn-article.blg"
   (rewritten before read)
-["pdflatex"] 1715283478.08483 "/home/peryton/salmonberry/sn-article-template/sn-article.tex" "sn-article.pdf" "sn-article" 1715283479.60528 0
+["pdflatex"] 1715283823.78088 "/home/peryton/salmonberry/sn-article-template/sn-article.tex" "sn-article.pdf" "sn-article" 1715283825.35911 0
   "/etc/texmf/web2c/texmf.cnf" 1678154913.1786 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/peryton/salmonberry/sn-article-template/sn-article.tex" 1715283477.70545 34420 70b5d79ba7a6b1231848284bb366244a ""
+  "/home/peryton/salmonberry/sn-article-template/sn-article.tex" 1715283823.47539 34108 3afb9d997099bfae4fcad233901c70ad ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -172,10 +172,10 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1715121783.47527 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1715121932 8216010 59bbd0a23a7e53854e68a224f5235b9b ""
   "fig.eps" 1715282888.21637 91593 5fb0e2d6f6b8d14a50f9628389d8517c ""
-  "sn-article.aux" 1715283479.08545 6099 e439f504cfcf5d98a2d4406d46f99e97 "pdflatex"
-  "sn-article.bbl" 1715283442.17546 7174 e2ee65b18eaaed669e08331c69d2cc4b "bibtex sn-article"
-  "sn-article.out" 1715283479.08545 3122 7869b4d47b59ceb8ae30c555ca9f4b42 "pdflatex"
-  "sn-article.tex" 1715283477.70545 34420 70b5d79ba7a6b1231848284bb366244a ""
+  "sn-article.aux" 1715283824.81539 6065 c3819826eed4c5664fc396dbd487b3b1 "pdflatex"
+  "sn-article.bbl" 1715283681.38541 7174 e2ee65b18eaaed669e08331c69d2cc4b "bibtex sn-article"
+  "sn-article.out" 1715283824.81539 3122 7869b4d47b59ceb8ae30c555ca9f4b42 "pdflatex"
+  "sn-article.tex" 1715283823.47539 34108 3afb9d997099bfae4fcad233901c70ad ""
   "sn-jnl.cls" 1715282888.43666 55331 2adf3041e7f64a0f542a04760be0043f ""
   (generated)
   "sn-article.aux"
