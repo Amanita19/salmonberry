@@ -48,3 +48,7 @@ tests/unitTests
 transcriptome/*
 
 *.rda
+*.fdb_latexmk
+*.synctex.gz
+*.log
+*.out
