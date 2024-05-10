@@ -117,7 +117,7 @@
 %%==================================%%
 
 \abstract{The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. Authors are advised to check the author instructions for the journal they are submitting to for word limits and if structural elements like subheadings, citations, or equations are permitted.}
-
+\input{abstract.tex}
 %%================================%%
 %% Sample for structured abstract %%
 %%================================%%
@@ -137,27 +137,14 @@
 %%\pacs[MSC Classification]{35A01, 65L10, 65L12, 65L20, 65L70}
 
 \maketitle
-\section{Background}
-\subsection{Salmon}
-\subsection{EM \& VBEM}
-\section{Experiment}
-\subsection{Datasets}
-\section{Evaluation}
-\[
-    \mathrm{ARD}_i = \begin{cases}
-        0 &\quad\text{if}\quad x_i = y_i = 0\\
-        \dfrac{\left| x_i-y_i \right| }{x_i-y_i} &\quad\text{otherwise}\quad
-    \end{cases}
-\]
+\input{background.tex}
+\input{datasets.tex}
+\input{methods.txt}
+\input{experiments.tex}
+\input{results.tex}
+\input{evaluation.tex}
+\input{discussion.tex}
 
-\[
-    \mathrm{MARD} = \frac{1}{M} \sum^{M}_{i = 1}\mathrm{ARD}_i
-\]
-\subsection{Spearman Correlation}
-\[
-    \rho = 1 - \dfrac{6 \sum{d^2_i}}{n(n^2-1)}
-\]
-\subsection{Mann–Whitney U Test}
 
 % \section{Introduction}\label{sec1}
 
