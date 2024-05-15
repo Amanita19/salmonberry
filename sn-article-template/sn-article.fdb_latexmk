@@ -157,9 +157,11 @@
   "sn-article.out" 1715797884.49895 1135 bc52220cb059bb30b9740883cb27637d "pdflatex"
   "sn-article.tex" 1715797843.9792 32232 4e57c01bf48daf9833493a54af3ae83d ""
   "sn-jnl.cls" 1715797843.97944 55331 2adf3041e7f64a0f542a04760be0043f ""
+["lualatex"] 0 "/home/peryton/salmonberry/sn-article-template/sn-article.tex" "sn-article.pdf" "sn-article" 0 -1
+  "/home/peryton/salmonberry/sn-article-template/sn-article.tex" 0 -1 0 ""
+  "sn-article.aux" 0 -1 0 "lualatex"
   (generated)
   "sn-article.aux"
   "sn-article.log"
-  "sn-article.out"
   "sn-article.pdf"
   (rewritten before read)
