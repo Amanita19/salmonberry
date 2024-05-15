@@ -84,3 +84,31 @@ CONCLUSIONS: Unlike T cells, which demonstrate significant DGE consistent with u
 	keywords = {Software, Statistical methods, Transcriptomics},
 	pages = {417--419},
 }
+
+@article{11c48783-68bb-36b7-8053-175211b0eaa8,
+	ISSN = {01621459},
+	URL = {http://www.jstor.org/stable/2291017},
+	abstract = {We consider the problem of model selection and accounting for model uncertainty in high-dimensional contingency tables, motivated by expert system applications. The approach most used currently is a stepwise strategy guided by tests based on approximate asymptotic P values leading to the selection of a single model; inference is then conditional on the selected model. The sampling properties of such a strategy are complex, and the failure to take account of model uncertainty leads to underestimation of uncertainty about quantities of interest. In principle, a panacea is provided by the standard Bayesian formalism that averages the posterior distributions of the quantity of interest under each of the models, weighted by their posterior model probabilities. Furthermore, this approach is optimal in the sense of maximizing predictive ability. But this has not been used in practice, because computing the posterior model probabilities is hard and the number of models is very large (often greater than 1011). We argue that the standard Bayesian formalism is unsatisfactory and propose an alternative Bayesian approach that, we contend, takes full account of the true model uncertainty by averaging over a much smaller set of models. An efficient search algorithm is developed for finding these models. We consider two classes of graphical models that arise in expert systems: the recursive causal models and the decomposable log-linear models. For each of these, we develop efficient ways of computing exact Bayes factors and hence posterior model probabilities. For the decomposable log-linear models, this is based on properties of chordal graphs and hyper-Markov prior distributions and the resultant calculations can be carried out locally. The end product is an overall strategy for model selection and accounting for model uncertainty that searches efficiently through the very large classes of models involved. Three examples are given. The first two concern data sets that have been analyzed by several authors in the context of model selection. The third addresses a urological diagnostic problem. In each example, our model averaging approach provides better out-of-sample predictive performance than any single model that might reasonably have been selected.},
+	author = {David Madigan and Adrian E. Raftery},
+	journal = {Journal of the American Statistical Association},
+	number = {428},
+	pages = {1535--1546},
+	publisher = {[American Statistical Association, Taylor & Francis, Ltd.]},
+	title = {Model Selection and Accounting for Model Uncertainty in Graphical Models Using Occam's Window},
+	urldate = {2024-05-15},
+	volume = {89},
+	year = {1994}
+}
+@article{doi:10.1177/2515245919898657,
+	author = {Max Hinne and Quentin F. Gronau and Don van den Bergh and Eric-Jan Wagenmakers},
+	title ={A Conceptual Introduction to Bayesian Model Averaging},
+	journal = {Advances in Methods and Practices in Psychological Science},
+	volume = {3},
+	number = {2},
+	pages = {200-215},
+	year = {2020},
+	doi = {10.1177/2515245919898657},
+	URL = {https://doi.org/10.1177/2515245919898657},
+	eprint = {https://doi.org/10.1177/2515245919898657},
+	abstract = { Many statistical scenarios initially involve several candidate models that describe the data-generating process. Analysis often proceeds by first selecting the best model according to some criterion and then learning about the parameters of this selected model. Crucially, however, in this approach the parameter estimates are conditioned on the selected model, and any uncertainty about the model-selection process is ignored. An alternative is to learn the parameters for all candidate models and then combine the estimates according to the posterior probabilities of the associated models. This approach is known as Bayesian model averaging (BMA). BMA has several important advantages over all-or-none selection methods, but has been used only sparingly in the social sciences. In this conceptual introduction, we explain the principles of BMA, describe its advantages over all-or-none model selection, and showcase its utility in three examples: analysis of covariance, meta-analysis, and network analysis. }
+}
