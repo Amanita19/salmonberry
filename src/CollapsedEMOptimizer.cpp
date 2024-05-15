@@ -413,6 +413,7 @@ bool doBootstrap(
   // Determine up front if we're going to use scaled counts.
   bool useScaledCounts = !(sopt.useQuasi or sopt.allowOrphans);
   bool useVBEM{sopt.useVBOpt};
+  bool useBoth{sopt.useBoth};
   size_t numClasses = txpGroups.size();
   CollapsedEMOptimizer::SerialVecType alphas(transcripts.size(), 0.0);
   CollapsedEMOptimizer::SerialVecType alphasPrime(transcripts.size(), 0.0);
@@ -467,13 +468,16 @@ bool doBootstrap(
     double cutoff = minAlpha;
 
     while (itNum < minIter or (itNum < maxIter and !converged)) {
-
       if (useVBEM) {
+        jointLog->warn("Here are the alphas: {}, {}, {}", alphas[175], alphas[1], alphas[2]);
         VBEMUpdate_(txpGroups, txpGroupCombinedWeights, sampCounts, 
                     priorAlphas, alphas, alphasPrime, expTheta);
+        jointLog->warn("VBEM alphas: {}, {}, {}", alphasPrime[175], alphasPrime[1], alphasPrime[2]);
       } else {
+        jointLog->warn("Here are the alphas: {}, {}, {}", alphas[175], alphas[1], alphas[2]);
         EMUpdate_(txpGroups, txpGroupCombinedWeights, sampCounts, 
                   alphas, alphasPrime);
+        jointLog->warn("EM alphas: {}, {}, {}", alphasPrime[175], alphasPrime[1], alphasPrime[2]);
       }
 
       converged = true;
@@ -498,11 +502,15 @@ bool doBootstrap(
     // counts
     if (sopt.bootstrapReproject) {
       if (useVBEM) {
+        jointLog->warn("Here are the alphas: {}, {}, {}", alphas[175], alphas[1], alphas[2]);
         VBEMUpdate_(txpGroups, txpGroupCombinedWeights, origCounts, 
                     priorAlphas, alphas, alphasPrime, expTheta);
+        jointLog->warn("VBEM alphas: {}, {}, {}", alphasPrime[175], alphasPrime[1], alphasPrime[2]);
       } else {
+        jointLog->warn("Here are the alphas: {}, {}, {}", alphas[175], alphas[1], alphas[2]);
         EMUpdate_(txpGroups, txpGroupCombinedWeights, origCounts, 
                   alphas, alphasPrime);
+        jointLog->warn("VBEM alphas: {}, {}, {}", alphasPrime[175], alphasPrime[1], alphasPrime[2]);
       }
     }
 
@@ -756,6 +764,7 @@ bool CollapsedEMOptimizer::optimize(ExpT& readExp, SalmonOpts& sopt,
   // With atomics
   VecType alphas(transcripts.size());
   VecType alphasPrime(transcripts.size());
+  VecType alphas_EM(transcripts.size());
   VecType expTheta(transcripts.size());
 
   Eigen::VectorXd effLens(transcripts.size());
@@ -766,6 +775,7 @@ bool CollapsedEMOptimizer::optimize(ExpT& readExp, SalmonOpts& sopt,
   bool noRichEq = sopt.noRichEqClasses;
 
   bool useVBEM{sopt.useVBOpt};
+  bool useBoth{sopt.useBoth};
   bool perTranscriptPrior{sopt.perTranscriptPrior};
   double priorValue{sopt.vbPrior};
 
@@ -779,252 +789,283 @@ bool CollapsedEMOptimizer::optimize(ExpT& readExp, SalmonOpts& sopt,
   // lengths rather than reference lengths.
   bool useEffectiveLengths = !sopt.noEffectiveLengthCorrection;
 
-  int64_t numActive{0};
-  double totalWeight{0.0};
-
-  for (size_t i = 0; i < transcripts.size(); ++i) {
-    auto& txp = transcripts[i];
-    alphas[i] = txp.projectedCounts;
-    totalWeight += alphas[i];
-    effLens(i) = useEffectiveLengths
-                     ? std::exp(txp.getCachedLogEffectiveLength())
-                     : txp.RefLength;
-    if (sopt.noLengthCorrection) {
-      effLens(i) = 100.0;
-    }
-    txp.EffectiveLength = effLens(i);
-
-    double uniqueCount = static_cast<double>(txp.uniqueCount() + 0.5);
-    auto wi = (sopt.initUniform) ? 100.0 : (uniqueCount * 1e-3 * effLens(i));
-    alphasPrime[i] = wi;
-    ++numActive;
-    totalLen += effLens(i);
-  }
-
-  // If we use VBEM, we'll need the prior parameters
-  std::vector<double> priorAlphas = populatePriorAlphas_(
-      transcripts, effLens, priorValue, perTranscriptPrior);
-
-  // Based on the number of observed reads, use
-  // a linear combination of the online estimates
-  // and the uniform distribution.
-  double uniformPrior = totalWeight / static_cast<double>(numActive);
-  double maxFrac = 0.999;
-  double fracObserved = std::min(maxFrac, totalWeight / sopt.numRequiredFragments);
-  // Above, we placed the uniformative (uniform) initalization into the
-  // alphasPrime variables.  If that's what the user requested, then copy those
-  // over to the alphas
-  if (sopt.initUniform) {
-    for (size_t i = 0; i < alphas.size(); ++i) {
-      alphas[i].store(alphasPrime[i].load());
-      alphasPrime[i] = 1.0;
-    }
-  } else { // otherwise, initialize with a linear combination of the true and
-           // uniform alphas
-    for (size_t i = 0; i < alphas.size(); ++i) {
-      auto uniAbund = (metaGenomeMode or altInitMode) ? alphasPrime[i].load()
-                                                      : uniformPrior;
-      alphas[i] =
-          (alphas[i] * fracObserved) + (uniAbund * (1.0 - fracObserved));
-      alphasPrime[i] = 1.0;
-    }
-  }
-
-  // If the user requested *not* to use "rich" equivalence classes,
-  // then wipe out all of the weight information here and simply replace
-  // the weights with the effective length terms (here, the *inverse* of
-  // the effective length).  Otherwise, multiply the existing weight terms
-  // by the effective length term.
-  arena.execute([&]{
-  oneapi::tbb::parallel_for(
-      BlockedIndexRange(size_t(0), size_t(eqVec.size())),
-      [&eqVec, &effLens, noRichEq, &sopt](const BlockedIndexRange& range) -> void {
-        // For each index in the equivalence class vector
-        for (auto eqID : boost::irange(range.begin(), range.end())) {
-          // The vector entry
-          auto& kv = eqVec[eqID];
-          // The label of the equivalence class
-          const TranscriptGroup& k = kv.first;
-          // The size of the label
-          size_t classSize = kv.second.weights.size(); // k.txps.size();
-          // The weights of the label
-          auto& v = kv.second;
-
-          // Iterate over each weight and set it
-          double wsum{0.0};
-
-          for (size_t i = 0; i < classSize; ++i) {
-            auto tid = k.txps[i];
-            double el = effLens(tid);
-            if (el <= 1.0) {
-              el = 1.0;
-            }
-            if (noRichEq) {
-              // Keep length factor separate for the time being
-              v.weights[i] = 1.0;
-            }
-            // meaningful values.
-            auto probStartPos = 1.0 / el;
-
-            // combined weight
-            double wt = sopt.eqClassMode ? v.weights[i] : v.count * v.weights[i] * probStartPos;
-            v.combinedWeights.push_back(wt);
-            wsum += wt;
-          }
-
-          double wnorm = 1.0 / wsum;
-          for (size_t i = 0; i < classSize; ++i) {
-            v.combinedWeights[i] = v.combinedWeights[i] * wnorm;
-          }
-        }
-      });
-  });
-
-  auto numRemoved =
-      markDegenerateClasses(eqVec, alphas, available, sopt.jointLog);
-  sopt.jointLog->info("Marked {} weighted equivalence classes as degenerate",
-                      numRemoved);
-
-  size_t itNum{0};
-
-  // EM termination criteria, adopted from Bray et al. 2016
-  double minAlpha = 1e-8;
-  double alphaCheckCutoff = 1e-2;
-  double cutoff = minAlpha;
-
-  // Iterations in which we will allow re-computing the effective lengths
-  // if bias-correction is enabled.
-  // std::vector<uint32_t> recomputeIt{100, 500, 1000};
-  minIter = 100;
-
-  bool converged{false};
-  double maxRelDiff = -std::numeric_limits<double>::max();
-  bool needBias = doBiasCorrect;
-  size_t targetIt{10};
-  /* -- v0.8.x
   double alphaSum = 0.0;
-  */
+  double minAlpha = 1e-8;
 
-  while (itNum < minIter or (itNum < maxIter and !converged) or needBias) {
-    if (needBias and (itNum > targetIt or converged)) {
+  int runthrough = 1;
+  if (useBoth) {
+    runthrough = 2;
+  }
 
-      jointLog->info(
-          "iteration {:n}, adjusting effective lengths to account for biases",
-          itNum);
-      effLens = salmon::utils::updateEffectiveLengths(arena, sopt, readExp, effLens,
-                                                      alphas, available, true);
-      // if we're doing the VB optimization, update the priors
-      if (useVBEM) {
-        priorAlphas = populatePriorAlphas_(transcripts, effLens, priorValue,
-                                           perTranscriptPrior);
+  for (int run = 0; run < runthrough; run++){
+    if (run == 1) {
+      useVBEM = true;
+      for (size_t i = 0; i < transcripts.size(); i++) {
+        alphas_EM[i].store(alphas[i].load());
       }
+    }
+    int64_t numActive{0};
+    double totalWeight{0.0};
 
-      // Check for strangeness with the lengths.
-      for (int32_t i = 0; i < effLens.size(); ++i) {
-        if (effLens(i) <= 0.0) {
-          jointLog->warn("Transcript {} had length {}", i, effLens(i));
-        }
+    for (size_t i = 0; i < transcripts.size(); ++i) {
+      auto& txp = transcripts[i];
+      alphas[i] = txp.projectedCounts;
+      totalWeight += alphas[i];
+      effLens(i) = useEffectiveLengths
+                      ? std::exp(txp.getCachedLogEffectiveLength())
+                      : txp.RefLength;
+      if (sopt.noLengthCorrection) {
+        effLens(i) = 100.0;
       }
-      updateEqClassWeights(arena, eqVec, effLens);
-      needBias = false;
+      txp.EffectiveLength = effLens(i);
 
-      if ( sopt.eqClassMode ) {
-        jointLog->error("Eqclass Mode should not be performing bias correction");
-        jointLog->flush();
-        exit(1);
+      double uniqueCount = static_cast<double>(txp.uniqueCount() + 0.5);
+      auto wi = (sopt.initUniform) ? 100.0 : (uniqueCount * 1e-3 * effLens(i));
+      alphasPrime[i] = wi;
+      ++numActive;
+      totalLen += effLens(i);
+    }
+
+    // If we use VBEM, we'll need the prior parameters
+    std::vector<double> priorAlphas = populatePriorAlphas_(
+        transcripts, effLens, priorValue, perTranscriptPrior);
+
+    // Based on the number of observed reads, use
+    // a linear combination of the online estimates
+    // and the uniform distribution.
+    double uniformPrior = totalWeight / static_cast<double>(numActive);
+    double maxFrac = 0.999;
+    double fracObserved = std::min(maxFrac, totalWeight / sopt.numRequiredFragments);
+    // Above, we placed the uniformative (uniform) initalization into the
+    // alphasPrime variables.  If that's what the user requested, then copy those
+    // over to the alphas
+    if (sopt.initUniform) {
+      for (size_t i = 0; i < alphas.size(); ++i) {
+        alphas[i].store(alphasPrime[i].load());
+        alphasPrime[i] = 1.0;
+      }
+    } else { // otherwise, initialize with a linear combination of the true and
+            // uniform alphas
+      for (size_t i = 0; i < alphas.size(); ++i) {
+        auto uniAbund = (metaGenomeMode or altInitMode) ? alphasPrime[i].load()
+                                                        : uniformPrior;
+        alphas[i] =
+            (alphas[i] * fracObserved) + (uniAbund * (1.0 - fracObserved));
+        alphasPrime[i] = 1.0;
       }
     }
 
-    if (useVBEM) {
-      VBEMUpdate_(arena, eqVec, priorAlphas, alphas,
-                  alphasPrime, expTheta);
-    } else {
-      /*
-      if (itNum > 0 and (itNum % 250 == 0)) {
+    // If the user requested *not* to use "rich" equivalence classes,
+    // then wipe out all of the weight information here and simply replace
+    // the weights with the effective length terms (here, the *inverse* of
+    // the effective length).  Otherwise, multiply the existing weight terms
+    // by the effective length term.
+    arena.execute([&]{
+    oneapi::tbb::parallel_for(
+        BlockedIndexRange(size_t(0), size_t(eqVec.size())),
+        [&eqVec, &effLens, noRichEq, &sopt](const BlockedIndexRange& range) -> void {
+          // For each index in the equivalence class vector
+          for (auto eqID : boost::irange(range.begin(), range.end())) {
+            // The vector entry
+            auto& kv = eqVec[eqID];
+            // The label of the equivalence class
+            const TranscriptGroup& k = kv.first;
+            // The size of the label
+            size_t classSize = kv.second.weights.size(); // k.txps.size();
+            // The weights of the label
+            auto& v = kv.second;
+
+            // Iterate over each weight and set it
+            double wsum{0.0};
+
+            for (size_t i = 0; i < classSize; ++i) {
+              auto tid = k.txps[i];
+              double el = effLens(tid);
+              if (el <= 1.0) {
+                el = 1.0;
+              }
+              if (noRichEq) {
+                // Keep length factor separate for the time being
+                v.weights[i] = 1.0;
+              }
+              // meaningful values.
+              auto probStartPos = 1.0 / el;
+
+              // combined weight
+              double wt = sopt.eqClassMode ? v.weights[i] : v.count * v.weights[i] * probStartPos;
+              v.combinedWeights.push_back(wt);
+              wsum += wt;
+            }
+
+            double wnorm = 1.0 / wsum;
+            for (size_t i = 0; i < classSize; ++i) {
+              v.combinedWeights[i] = v.combinedWeights[i] * wnorm;
+            }
+          }
+        });
+    });
+
+    auto numRemoved =
+        markDegenerateClasses(eqVec, alphas, available, sopt.jointLog);
+    sopt.jointLog->info("Marked {} weighted equivalence classes as degenerate",
+                        numRemoved);
+
+    size_t itNum{0};
+
+    // EM termination criteria, adopted from Bray et al. 2016
+    double alphaCheckCutoff = 1e-2;
+
+    // Iterations in which we will allow re-computing the effective lengths
+    // if bias-correction is enabled.
+    // std::vector<uint32_t> recomputeIt{100, 500, 1000};
+    minIter = 100;
+
+    bool converged{false};
+    double maxRelDiff = -std::numeric_limits<double>::max();
+    bool needBias = doBiasCorrect;
+    size_t targetIt{10};
+    /* -- v0.8.x
+    double alphaSum = 0.0;
+    */
+
+    while (itNum < minIter or (itNum < maxIter and !converged) or needBias) {
+      if (needBias and (itNum > targetIt or converged)) {
+
+        jointLog->info(
+            "iteration {:n}, adjusting effective lengths to account for biases",
+            itNum);
+        effLens = salmon::utils::updateEffectiveLengths(arena, sopt, readExp, effLens,
+                                                        alphas, available, true);
+        // if we're doing the VB optimization, update the priors
+        if (useVBEM) {
+          priorAlphas = populatePriorAlphas_(transcripts, effLens, priorValue,
+                                            perTranscriptPrior);
+        }
+
+        // Check for strangeness with the lengths.
+        for (int32_t i = 0; i < effLens.size(); ++i) {
+          if (effLens(i) <= 0.0) {
+            jointLog->warn("Transcript {} had length {}", i, effLens(i));
+          }
+        }
+        updateEqClassWeights(arena, eqVec, effLens);
+        needBias = false;
+
+        if ( sopt.eqClassMode ) {
+          jointLog->error("Eqclass Mode should not be performing bias correction");
+          jointLog->flush();
+          exit(1);
+        }
+      }
+      if (useVBEM) {
+        jointLog->warn("Here are the alphas: {}, {}, {}", alphas[175], alphas[1], alphas[2]);
+        VBEMUpdate_(arena, eqVec, priorAlphas, alphas,
+                    alphasPrime, expTheta);
+        jointLog->warn("VBEM alphas: {}, {}, {}", alphasPrime[175], alphasPrime[1], alphasPrime[2]);
+      } else {
+        /*
+        if (itNum > 0 and (itNum % 250 == 0)) {
+          for (size_t i = 0; i < transcripts.size(); ++i) {
+            if (alphas[i] < 1.0) { alphas[i] = 0.0; }
+          }
+        }
+        */
+        jointLog->warn("Here are the alphas: {}, {}, {}", alphas[175], alphas[1], alphas[2]);
+        EMUpdate_(arena, eqVec, priorAlphas, alphas, alphasPrime);
+        jointLog->warn("EM alphas: {}, {}, {}", alphasPrime[175], alphasPrime[1], alphasPrime[2]);
+      }
+
+      converged = true;
+      maxRelDiff = -std::numeric_limits<double>::max();
+      for (size_t i = 0; i < transcripts.size(); ++i) {
+        if (alphasPrime[i] > alphaCheckCutoff) {
+          double relDiff = std::abs(alphas[i] - alphasPrime[i]) / alphasPrime[i];
+          maxRelDiff = (relDiff > maxRelDiff) ? relDiff : maxRelDiff;
+          if (relDiff > relDiffTolerance) {
+            converged = false;
+          }
+        }
+        alphas[i].store(alphasPrime[i].load());
+        alphasPrime[i].store(0.0);
+      }
+
+      /* -- v0.8.x
+      if (converged and itNum > minIter and !needBias) {
+        if (useVBEM and !perTranscriptPrior) {
+          std::vector<double> cutoffs(transcripts.size(), 0.0);
+          for (size_t i = 0; i < transcripts.size(); ++i) {
+            cutoffs[i] = minAlpha;
+          }
+          alphaSum = truncateCountVector(alphas, cutoffs);
+        } else {
+          // Truncate tiny expression values
+          alphaSum = truncateCountVector(alphas, cutoff);
+        }
+        if (useVBEM) {
+          VBEMUpdate_(eqVec, priorAlphas, alphas,
+      alphasPrime, expTheta); } else { EMUpdate_(eqVec, transcripts, alphas,
+      alphasPrime);
+        }
         for (size_t i = 0; i < transcripts.size(); ++i) {
-      	  if (alphas[i] < 1.0) { alphas[i] = 0.0; }
-      	}
+          alphas[i] = alphasPrime[i];
+          alphasPrime[i] = 0.0;
+        }
       }
       */
 
-      EMUpdate_(arena, eqVec, priorAlphas, alphas, alphasPrime);
-    }
-
-    converged = true;
-    maxRelDiff = -std::numeric_limits<double>::max();
-    for (size_t i = 0; i < transcripts.size(); ++i) {
-      if (alphasPrime[i] > alphaCheckCutoff) {
-        double relDiff = std::abs(alphas[i] - alphasPrime[i]) / alphasPrime[i];
-        maxRelDiff = (relDiff > maxRelDiff) ? relDiff : maxRelDiff;
-        if (relDiff > relDiffTolerance) {
-          converged = false;
-        }
+      if (itNum % 100 == 0) {
+        jointLog->info("iteration = {:n} | max rel diff. = {}", itNum, maxRelDiff);
       }
-      alphas[i].store(alphasPrime[i].load());
-      alphasPrime[i].store(0.0);
+
+      ++itNum;
     }
 
     /* -- v0.8.x
-    if (converged and itNum > minIter and !needBias) {
-      if (useVBEM and !perTranscriptPrior) {
-        std::vector<double> cutoffs(transcripts.size(), 0.0);
-        for (size_t i = 0; i < transcripts.size(); ++i) {
-          cutoffs[i] = minAlpha;
-        }
-        alphaSum = truncateCountVector(alphas, cutoffs);
-      } else {
-        // Truncate tiny expression values
-        alphaSum = truncateCountVector(alphas, cutoff);
-      }
-      if (useVBEM) {
-        VBEMUpdate_(eqVec, priorAlphas, alphas,
-    alphasPrime, expTheta); } else { EMUpdate_(eqVec, transcripts, alphas,
-    alphasPrime);
-      }
-      for (size_t i = 0; i < transcripts.size(); ++i) {
-        alphas[i] = alphasPrime[i];
-        alphasPrime[i] = 0.0;
-      }
+    if (alphaSum < ::minWeight) {
+      jointLog->error("Total alpha weight was too small! "
+                      "Make sure you ran salmon correctly.");
+      return false;
     }
     */
 
-    if (itNum % 100 == 0) {
-      jointLog->info("iteration = {:n} | max rel diff. = {}", itNum, maxRelDiff);
+    // Reset the original bias correction options
+    sopt.gcBiasCorrect = gcBiasCorrect;
+    sopt.biasCorrect = seqBiasCorrect;
+
+    jointLog->info("iteration = {:n} | max rel diff. = {}", itNum, maxRelDiff);
+
+    double cutoff = minAlpha;
+    if (useVBEM and !perTranscriptPrior) {
+      std::vector<double> cutoffs(transcripts.size(), 0.0);
+      for (size_t i = 0; i < transcripts.size(); ++i) {
+        cutoffs[i] = minAlpha;
+      }
+      alphaSum = truncateCountVector(alphas, cutoffs);
+    } else {
+      // Truncate tiny expression values
+      alphaSum = truncateCountVector(alphas, cutoff);
     }
 
-    ++itNum;
-  }
-
-  /* -- v0.8.x
-  if (alphaSum < ::minWeight) {
-    jointLog->error("Total alpha weight was too small! "
-                    "Make sure you ran salmon correctly.");
-    return false;
-  }
-  */
-
-  // Reset the original bias correction options
-  sopt.gcBiasCorrect = gcBiasCorrect;
-  sopt.biasCorrect = seqBiasCorrect;
-
-  jointLog->info("iteration = {:n} | max rel diff. = {}", itNum, maxRelDiff);
-
-  double alphaSum = 0.0;
-  if (useVBEM and !perTranscriptPrior) {
-    std::vector<double> cutoffs(transcripts.size(), 0.0);
-    for (size_t i = 0; i < transcripts.size(); ++i) {
-      cutoffs[i] = minAlpha;
+    if (alphaSum < ::minWeight) {
+      jointLog->error("Total alpha weight was too small! "
+                      "Make sure you ran salmon correctly.");
+      return false;
     }
-    alphaSum = truncateCountVector(alphas, cutoffs);
-  } else {
-    // Truncate tiny expression values
+
+  }
+
+  if (useBoth) {
+    for (size_t i = 0; i < transcripts.size(); i++) {
+      alphas[i] = (alphas[i] + alphas_EM[i]) / 2;
+    }  
+    double cutoff = minAlpha;
     alphaSum = truncateCountVector(alphas, cutoff);
-  }
 
-  if (alphaSum < ::minWeight) {
-    jointLog->error("Total alpha weight was too small! "
-                    "Make sure you ran salmon correctly.");
-    return false;
+    if (alphaSum < ::minWeight) {
+      jointLog->error("Total alpha weight was too small! "
+                      "Make sure you ran salmon correctly.");
+      return false;
+    }
   }
 
   // Set the mass of each transcript using the

@@ -1,58 +1,2482 @@
-[2024-05-02 14:53:22.019] [jointLog] [info] setting maxHashResizeThreads to 6
-[2024-05-02 14:53:22.019] [jointLog] [info] Fragment incompatibility prior below threshold.  Incompatible fragments will be ignored.
-[2024-05-02 14:53:22.019] [jointLog] [info] Usage of --validateMappings implies use of minScoreFraction. Since not explicitly specified, it is being set to 0.65
-[2024-05-02 14:53:22.019] [jointLog] [info] Setting consensusSlack to selective-alignment default of 0.35.
-[2024-05-02 14:53:22.019] [jointLog] [info] parsing read library format
-[2024-05-02 14:53:22.041] [jointLog] [info] There is 1 library.
-[2024-05-02 14:53:22.102] [jointLog] [info] Loading pufferfish index
-[2024-05-02 14:53:22.110] [jointLog] [info] Loading dense pufferfish index.
-[2024-05-02 14:56:04.195] [jointLog] [info] done
-[2024-05-02 14:56:04.348] [jointLog] [info] Index contained 192,825 targets
-[2024-05-02 14:56:06.196] [jointLog] [info] Number of decoys : 0
-[2024-05-02 15:19:42.105] [jointLog] [info] Computed 334,500 rich equivalence classes for further processing
-[2024-05-02 15:19:42.105] [jointLog] [info] Counted 33,246,877 total reads in the equivalence classes 
-[2024-05-02 15:19:42.112] [jointLog] [info] Number of mappings discarded because of alignment score : 11,620,139
-[2024-05-02 15:19:42.112] [jointLog] [info] Number of fragments entirely discarded because of alignment score : 485,823
-[2024-05-02 15:19:42.112] [jointLog] [info] Number of fragments discarded because they are best-mapped to decoys : 0
-[2024-05-02 15:19:42.112] [jointLog] [info] Number of fragments discarded because they have only dovetail (discordant) mappings to valid targets : 47,820
-[2024-05-02 15:19:42.112] [jointLog] [info] Mapping rate = 92.9314%
+[2024-05-15 12:50:52.913] [jointLog] [info] setting maxHashResizeThreads to 6
+[2024-05-15 12:50:52.913] [jointLog] [info] Fragment incompatibility prior below threshold.  Incompatible fragments will be ignored.
+[2024-05-15 12:50:52.913] [jointLog] [info] Usage of --validateMappings implies use of minScoreFraction. Since not explicitly specified, it is being set to 0.65
+[2024-05-15 12:50:52.914] [jointLog] [info] Setting consensusSlack to selective-alignment default of 0.35.
+[2024-05-15 12:50:52.914] [jointLog] [info] parsing read library format
+[2024-05-15 12:50:52.914] [jointLog] [info] There is 1 library.
+[2024-05-15 12:50:52.933] [jointLog] [info] Loading pufferfish index
+[2024-05-15 12:50:52.934] [jointLog] [info] Loading dense pufferfish index.
+[2024-05-15 12:50:57.539] [jointLog] [info] done
+[2024-05-15 12:50:57.602] [jointLog] [info] Index contained 192,825 targets
+[2024-05-15 12:51:00.053] [jointLog] [info] Number of decoys : 0
+[2024-05-15 13:22:05.051] [jointLog] [info] Computed 334,573 rich equivalence classes for further processing
+[2024-05-15 13:22:05.051] [jointLog] [info] Counted 33,246,877 total reads in the equivalence classes 
+[2024-05-15 13:22:05.058] [jointLog] [info] Number of mappings discarded because of alignment score : 11,620,139
+[2024-05-15 13:22:05.058] [jointLog] [info] Number of fragments entirely discarded because of alignment score : 485,823
+[2024-05-15 13:22:05.058] [jointLog] [info] Number of fragments discarded because they are best-mapped to decoys : 0
+[2024-05-15 13:22:05.058] [jointLog] [info] Number of fragments discarded because they have only dovetail (discordant) mappings to valid targets : 47,820
+[2024-05-15 13:22:05.058] [jointLog] [info] Mapping rate = 92.9314%
 
-[2024-05-02 15:19:42.113] [jointLog] [info] finished quantifyLibrary()
-[2024-05-02 15:19:42.127] [jointLog] [info] Starting optimizer
-[2024-05-02 15:19:42.333] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
-[2024-05-02 15:19:42.374] [jointLog] [info] iteration = 0 | max rel diff. = 56.7715
-[2024-05-02 15:19:42.107] [fileLog] [info] 
+[2024-05-15 13:22:05.058] [jointLog] [info] finished quantifyLibrary()
+[2024-05-15 13:22:05.092] [jointLog] [info] Starting optimizer
+[2024-05-15 13:22:05.298] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2024-05-15 13:22:05.298] [jointLog] [warning] Here are the alphas: 57.7734, 57.7715, 57.7715
+[2024-05-15 13:22:05.052] [fileLog] [info] 
 At end of round 0
 ==================
 Observed 35775707 total fragments (35775707 in most recent round)
 
-[2024-05-02 15:19:42.777] [jointLog] [info] iteration 11, adjusting effective lengths to account for biases
-[2024-05-02 15:21:53.154] [jointLog] [info] Computed expected counts (for bias correction)
-[2024-05-02 15:21:53.154] [jointLog] [info] processed bias for 0.1% of the transcripts
-[2024-05-02 15:22:01.946] [jointLog] [info] processed bias for 10.0% of the transcripts
-[2024-05-02 15:22:10.592] [jointLog] [info] processed bias for 20.0% of the transcripts
-[2024-05-02 15:22:20.410] [jointLog] [info] processed bias for 30.0% of the transcripts
-[2024-05-02 15:22:30.404] [jointLog] [info] processed bias for 40.0% of the transcripts
-[2024-05-02 15:22:41.229] [jointLog] [info] processed bias for 50.0% of the transcripts
-[2024-05-02 15:22:51.909] [jointLog] [info] processed bias for 60.0% of the transcripts
-[2024-05-02 15:23:03.584] [jointLog] [info] processed bias for 70.0% of the transcripts
-[2024-05-02 15:23:14.225] [jointLog] [info] processed bias for 80.0% of the transcripts
-[2024-05-02 15:23:25.874] [jointLog] [info] processed bias for 90.0% of the transcripts
-[2024-05-02 15:23:28.445] [jointLog] [info] processed bias for 100.0% of the transcripts
-[2024-05-02 15:23:28.445] [jointLog] [info] processed bias for 100.0% of the transcripts
-[2024-05-02 15:23:32.148] [jointLog] [info] iteration = 100 | max rel diff. = 0.150583
-[2024-05-02 15:23:36.209] [jointLog] [info] iteration = 200 | max rel diff. = 0.0671725
-[2024-05-02 15:23:40.279] [jointLog] [info] iteration = 300 | max rel diff. = 0.0445933
-[2024-05-02 15:23:44.371] [jointLog] [info] iteration = 400 | max rel diff. = 0.0316827
-[2024-05-02 15:23:48.498] [jointLog] [info] iteration = 500 | max rel diff. = 0.0274234
-[2024-05-02 15:23:52.629] [jointLog] [info] iteration = 600 | max rel diff. = 0.0201313
-[2024-05-02 15:23:56.788] [jointLog] [info] iteration = 700 | max rel diff. = 0.0174297
-[2024-05-02 15:24:00.972] [jointLog] [info] iteration = 800 | max rel diff. = 0.0159622
-[2024-05-02 15:24:05.187] [jointLog] [info] iteration = 900 | max rel diff. = 0.0119399
-[2024-05-02 15:24:09.421] [jointLog] [info] iteration = 1,000 | max rel diff. = 0.0176476
-[2024-05-02 15:24:13.683] [jointLog] [info] iteration = 1,100 | max rel diff. = 0.0137328
-[2024-05-02 15:24:17.983] [jointLog] [info] iteration = 1,200 | max rel diff. = 0.0105108
-[2024-05-02 15:24:18.457] [jointLog] [info] iteration = 1,212 | max rel diff. = 0.00934292
-[2024-05-02 15:24:18.476] [jointLog] [info] Finished optimizer
-[2024-05-02 15:24:18.476] [jointLog] [info] writing output 
+[2024-05-15 13:22:05.342] [jointLog] [warning] EM alphas: 6.45984, 1, 1
+[2024-05-15 13:22:05.346] [jointLog] [info] iteration = 0 | max rel diff. = 56.7715
+[2024-05-15 13:22:05.346] [jointLog] [warning] Here are the alphas: 6.45984, 1, 1
+[2024-05-15 13:22:05.389] [jointLog] [warning] EM alphas: 4.67866, 0, 0
+[2024-05-15 13:22:05.393] [jointLog] [warning] Here are the alphas: 4.67866, 0, 0
+[2024-05-15 13:22:05.437] [jointLog] [warning] EM alphas: 4.03577, 0, 0
+[2024-05-15 13:22:05.440] [jointLog] [warning] Here are the alphas: 4.03577, 0, 0
+[2024-05-15 13:22:05.484] [jointLog] [warning] EM alphas: 3.56648, 0, 0
+[2024-05-15 13:22:05.487] [jointLog] [warning] Here are the alphas: 3.56648, 0, 0
+[2024-05-15 13:22:05.531] [jointLog] [warning] EM alphas: 3.2145, 0, 0
+[2024-05-15 13:22:05.535] [jointLog] [warning] Here are the alphas: 3.2145, 0, 0
+[2024-05-15 13:22:05.579] [jointLog] [warning] EM alphas: 2.94695, 0, 0
+[2024-05-15 13:22:05.582] [jointLog] [warning] Here are the alphas: 2.94695, 0, 0
+[2024-05-15 13:22:05.626] [jointLog] [warning] EM alphas: 2.74108, 0, 0
+[2024-05-15 13:22:05.629] [jointLog] [warning] Here are the alphas: 2.74108, 0, 0
+[2024-05-15 13:22:05.673] [jointLog] [warning] EM alphas: 2.58091, 0, 0
+[2024-05-15 13:22:05.676] [jointLog] [warning] Here are the alphas: 2.58091, 0, 0
+[2024-05-15 13:22:05.720] [jointLog] [warning] EM alphas: 2.45507, 0, 0
+[2024-05-15 13:22:05.724] [jointLog] [warning] Here are the alphas: 2.45507, 0, 0
+[2024-05-15 13:22:05.767] [jointLog] [warning] EM alphas: 2.35535, 0, 0
+[2024-05-15 13:22:05.771] [jointLog] [warning] Here are the alphas: 2.35535, 0, 0
+[2024-05-15 13:22:05.815] [jointLog] [warning] EM alphas: 2.27576, 0, 0
+[2024-05-15 13:22:05.819] [jointLog] [info] iteration 11, adjusting effective lengths to account for biases
+[2024-05-15 13:24:49.396] [jointLog] [info] Computed expected counts (for bias correction)
+[2024-05-15 13:24:49.396] [jointLog] [info] processed bias for 0.1% of the transcripts
+[2024-05-15 13:25:01.523] [jointLog] [info] processed bias for 10.0% of the transcripts
+[2024-05-15 13:25:13.314] [jointLog] [info] processed bias for 20.0% of the transcripts
+[2024-05-15 13:25:26.666] [jointLog] [info] processed bias for 30.0% of the transcripts
+[2024-05-15 13:25:40.430] [jointLog] [info] processed bias for 40.0% of the transcripts
+[2024-05-15 13:25:55.279] [jointLog] [info] processed bias for 50.0% of the transcripts
+[2024-05-15 13:26:09.912] [jointLog] [info] processed bias for 60.0% of the transcripts
+[2024-05-15 13:26:25.835] [jointLog] [info] processed bias for 70.0% of the transcripts
+[2024-05-15 13:26:40.334] [jointLog] [info] processed bias for 80.0% of the transcripts
+[2024-05-15 13:26:56.178] [jointLog] [info] processed bias for 90.0% of the transcripts
+[2024-05-15 13:26:59.686] [jointLog] [info] processed bias for 100.0% of the transcripts
+[2024-05-15 13:26:59.686] [jointLog] [info] processed bias for 100.0% of the transcripts
+[2024-05-15 13:26:59.744] [jointLog] [warning] Here are the alphas: 2.27576, 0, 0
+[2024-05-15 13:26:59.790] [jointLog] [warning] EM alphas: 2.2288, 0, 0
+[2024-05-15 13:26:59.793] [jointLog] [warning] Here are the alphas: 2.2288, 0, 0
+[2024-05-15 13:26:59.838] [jointLog] [warning] EM alphas: 2.19011, 0, 0
+[2024-05-15 13:26:59.841] [jointLog] [warning] Here are the alphas: 2.19011, 0, 0
+[2024-05-15 13:26:59.885] [jointLog] [warning] EM alphas: 2.15868, 0, 0
+[2024-05-15 13:26:59.889] [jointLog] [warning] Here are the alphas: 2.15868, 0, 0
+[2024-05-15 13:26:59.933] [jointLog] [warning] EM alphas: 2.13309, 0, 0
+[2024-05-15 13:26:59.936] [jointLog] [warning] Here are the alphas: 2.13309, 0, 0
+[2024-05-15 13:26:59.980] [jointLog] [warning] EM alphas: 2.1122, 0, 0
+[2024-05-15 13:26:59.984] [jointLog] [warning] Here are the alphas: 2.1122, 0, 0
+[2024-05-15 13:27:00.028] [jointLog] [warning] EM alphas: 2.09512, 0, 0
+[2024-05-15 13:27:00.032] [jointLog] [warning] Here are the alphas: 2.09512, 0, 0
+[2024-05-15 13:27:00.076] [jointLog] [warning] EM alphas: 2.08113, 0, 0
+[2024-05-15 13:27:00.079] [jointLog] [warning] Here are the alphas: 2.08113, 0, 0
+[2024-05-15 13:27:00.124] [jointLog] [warning] EM alphas: 2.06966, 0, 0
+[2024-05-15 13:27:00.127] [jointLog] [warning] Here are the alphas: 2.06966, 0, 0
+[2024-05-15 13:27:00.171] [jointLog] [warning] EM alphas: 2.06024, 0, 0
+[2024-05-15 13:27:00.175] [jointLog] [warning] Here are the alphas: 2.06024, 0, 0
+[2024-05-15 13:27:00.219] [jointLog] [warning] EM alphas: 2.0525, 0, 0
+[2024-05-15 13:27:00.222] [jointLog] [warning] Here are the alphas: 2.0525, 0, 0
+[2024-05-15 13:27:00.267] [jointLog] [warning] EM alphas: 2.04614, 0, 0
+[2024-05-15 13:27:00.270] [jointLog] [warning] Here are the alphas: 2.04614, 0, 0
+[2024-05-15 13:27:00.314] [jointLog] [warning] EM alphas: 2.0409, 0, 0
+[2024-05-15 13:27:00.318] [jointLog] [warning] Here are the alphas: 2.0409, 0, 0
+[2024-05-15 13:27:00.362] [jointLog] [warning] EM alphas: 2.03659, 0, 0
+[2024-05-15 13:27:00.365] [jointLog] [warning] Here are the alphas: 2.03659, 0, 0
+[2024-05-15 13:27:00.410] [jointLog] [warning] EM alphas: 2.03304, 0, 0
+[2024-05-15 13:27:00.413] [jointLog] [warning] Here are the alphas: 2.03304, 0, 0
+[2024-05-15 13:27:00.457] [jointLog] [warning] EM alphas: 2.03012, 0, 0
+[2024-05-15 13:27:00.461] [jointLog] [warning] Here are the alphas: 2.03012, 0, 0
+[2024-05-15 13:27:00.505] [jointLog] [warning] EM alphas: 2.02772, 0, 0
+[2024-05-15 13:27:00.509] [jointLog] [warning] Here are the alphas: 2.02772, 0, 0
+[2024-05-15 13:27:00.553] [jointLog] [warning] EM alphas: 2.02573, 0, 0
+[2024-05-15 13:27:00.557] [jointLog] [warning] Here are the alphas: 2.02573, 0, 0
+[2024-05-15 13:27:00.601] [jointLog] [warning] EM alphas: 2.0241, 0, 0
+[2024-05-15 13:27:00.604] [jointLog] [warning] Here are the alphas: 2.0241, 0, 0
+[2024-05-15 13:27:00.649] [jointLog] [warning] EM alphas: 2.02275, 0, 0
+[2024-05-15 13:27:00.652] [jointLog] [warning] Here are the alphas: 2.02275, 0, 0
+[2024-05-15 13:27:00.696] [jointLog] [warning] EM alphas: 2.02164, 0, 0
+[2024-05-15 13:27:00.700] [jointLog] [warning] Here are the alphas: 2.02164, 0, 0
+[2024-05-15 13:27:00.744] [jointLog] [warning] EM alphas: 2.02073, 0, 0
+[2024-05-15 13:27:00.748] [jointLog] [warning] Here are the alphas: 2.02073, 0, 0
+[2024-05-15 13:27:00.792] [jointLog] [warning] EM alphas: 2.01998, 0, 0
+[2024-05-15 13:27:00.796] [jointLog] [warning] Here are the alphas: 2.01998, 0, 0
+[2024-05-15 13:27:00.840] [jointLog] [warning] EM alphas: 2.01936, 0, 0
+[2024-05-15 13:27:00.844] [jointLog] [warning] Here are the alphas: 2.01936, 0, 0
+[2024-05-15 13:27:00.888] [jointLog] [warning] EM alphas: 2.01885, 0, 0
+[2024-05-15 13:27:00.891] [jointLog] [warning] Here are the alphas: 2.01885, 0, 0
+[2024-05-15 13:27:00.936] [jointLog] [warning] EM alphas: 2.01843, 0, 0
+[2024-05-15 13:27:00.939] [jointLog] [warning] Here are the alphas: 2.01843, 0, 0
+[2024-05-15 13:27:00.983] [jointLog] [warning] EM alphas: 2.01809, 0, 0
+[2024-05-15 13:27:00.987] [jointLog] [warning] Here are the alphas: 2.01809, 0, 0
+[2024-05-15 13:27:01.031] [jointLog] [warning] EM alphas: 2.0178, 0, 0
+[2024-05-15 13:27:01.034] [jointLog] [warning] Here are the alphas: 2.0178, 0, 0
+[2024-05-15 13:27:01.078] [jointLog] [warning] EM alphas: 2.01757, 0, 0
+[2024-05-15 13:27:01.082] [jointLog] [warning] Here are the alphas: 2.01757, 0, 0
+[2024-05-15 13:27:01.126] [jointLog] [warning] EM alphas: 2.01738, 0, 0
+[2024-05-15 13:27:01.130] [jointLog] [warning] Here are the alphas: 2.01738, 0, 0
+[2024-05-15 13:27:01.174] [jointLog] [warning] EM alphas: 2.01722, 0, 0
+[2024-05-15 13:27:01.177] [jointLog] [warning] Here are the alphas: 2.01722, 0, 0
+[2024-05-15 13:27:01.222] [jointLog] [warning] EM alphas: 2.0171, 0, 0
+[2024-05-15 13:27:01.225] [jointLog] [warning] Here are the alphas: 2.0171, 0, 0
+[2024-05-15 13:27:01.269] [jointLog] [warning] EM alphas: 2.01699, 0, 0
+[2024-05-15 13:27:01.273] [jointLog] [warning] Here are the alphas: 2.01699, 0, 0
+[2024-05-15 13:27:01.320] [jointLog] [warning] EM alphas: 2.01691, 0, 0
+[2024-05-15 13:27:01.324] [jointLog] [warning] Here are the alphas: 2.01691, 0, 0
+[2024-05-15 13:27:01.372] [jointLog] [warning] EM alphas: 2.01684, 0, 0
+[2024-05-15 13:27:01.376] [jointLog] [warning] Here are the alphas: 2.01684, 0, 0
+[2024-05-15 13:27:01.421] [jointLog] [warning] EM alphas: 2.01678, 0, 0
+[2024-05-15 13:27:01.424] [jointLog] [warning] Here are the alphas: 2.01678, 0, 0
+[2024-05-15 13:27:01.468] [jointLog] [warning] EM alphas: 2.01673, 0, 0
+[2024-05-15 13:27:01.472] [jointLog] [warning] Here are the alphas: 2.01673, 0, 0
+[2024-05-15 13:27:01.516] [jointLog] [warning] EM alphas: 2.0167, 0, 0
+[2024-05-15 13:27:01.520] [jointLog] [warning] Here are the alphas: 2.0167, 0, 0
+[2024-05-15 13:27:01.564] [jointLog] [warning] EM alphas: 2.01667, 0, 0
+[2024-05-15 13:27:01.567] [jointLog] [warning] Here are the alphas: 2.01667, 0, 0
+[2024-05-15 13:27:01.611] [jointLog] [warning] EM alphas: 2.01664, 0, 0
+[2024-05-15 13:27:01.615] [jointLog] [warning] Here are the alphas: 2.01664, 0, 0
+[2024-05-15 13:27:01.659] [jointLog] [warning] EM alphas: 2.01662, 0, 0
+[2024-05-15 13:27:01.662] [jointLog] [warning] Here are the alphas: 2.01662, 0, 0
+[2024-05-15 13:27:01.706] [jointLog] [warning] EM alphas: 2.01661, 0, 0
+[2024-05-15 13:27:01.710] [jointLog] [warning] Here are the alphas: 2.01661, 0, 0
+[2024-05-15 13:27:01.754] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:01.757] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:01.802] [jointLog] [warning] EM alphas: 2.01659, 0, 0
+[2024-05-15 13:27:01.805] [jointLog] [warning] Here are the alphas: 2.01659, 0, 0
+[2024-05-15 13:27:01.850] [jointLog] [warning] EM alphas: 2.01658, 0, 0
+[2024-05-15 13:27:01.853] [jointLog] [warning] Here are the alphas: 2.01658, 0, 0
+[2024-05-15 13:27:01.897] [jointLog] [warning] EM alphas: 2.01657, 0, 0
+[2024-05-15 13:27:01.901] [jointLog] [warning] Here are the alphas: 2.01657, 0, 0
+[2024-05-15 13:27:01.945] [jointLog] [warning] EM alphas: 2.01657, 0, 0
+[2024-05-15 13:27:01.948] [jointLog] [warning] Here are the alphas: 2.01657, 0, 0
+[2024-05-15 13:27:01.992] [jointLog] [warning] EM alphas: 2.01657, 0, 0
+[2024-05-15 13:27:01.996] [jointLog] [warning] Here are the alphas: 2.01657, 0, 0
+[2024-05-15 13:27:02.040] [jointLog] [warning] EM alphas: 2.01656, 0, 0
+[2024-05-15 13:27:02.044] [jointLog] [warning] Here are the alphas: 2.01656, 0, 0
+[2024-05-15 13:27:02.088] [jointLog] [warning] EM alphas: 2.01656, 0, 0
+[2024-05-15 13:27:02.091] [jointLog] [warning] Here are the alphas: 2.01656, 0, 0
+[2024-05-15 13:27:02.136] [jointLog] [warning] EM alphas: 2.01656, 0, 0
+[2024-05-15 13:27:02.139] [jointLog] [warning] Here are the alphas: 2.01656, 0, 0
+[2024-05-15 13:27:02.183] [jointLog] [warning] EM alphas: 2.01656, 0, 0
+[2024-05-15 13:27:02.187] [jointLog] [warning] Here are the alphas: 2.01656, 0, 0
+[2024-05-15 13:27:02.231] [jointLog] [warning] EM alphas: 2.01656, 0, 0
+[2024-05-15 13:27:02.234] [jointLog] [warning] Here are the alphas: 2.01656, 0, 0
+[2024-05-15 13:27:02.279] [jointLog] [warning] EM alphas: 2.01656, 0, 0
+[2024-05-15 13:27:02.283] [jointLog] [warning] Here are the alphas: 2.01656, 0, 0
+[2024-05-15 13:27:02.326] [jointLog] [warning] EM alphas: 2.01656, 0, 0
+[2024-05-15 13:27:02.330] [jointLog] [warning] Here are the alphas: 2.01656, 0, 0
+[2024-05-15 13:27:02.374] [jointLog] [warning] EM alphas: 2.01657, 0, 0
+[2024-05-15 13:27:02.378] [jointLog] [warning] Here are the alphas: 2.01657, 0, 0
+[2024-05-15 13:27:02.422] [jointLog] [warning] EM alphas: 2.01657, 0, 0
+[2024-05-15 13:27:02.425] [jointLog] [warning] Here are the alphas: 2.01657, 0, 0
+[2024-05-15 13:27:02.469] [jointLog] [warning] EM alphas: 2.01657, 0, 0
+[2024-05-15 13:27:02.473] [jointLog] [warning] Here are the alphas: 2.01657, 0, 0
+[2024-05-15 13:27:02.517] [jointLog] [warning] EM alphas: 2.01657, 0, 0
+[2024-05-15 13:27:02.520] [jointLog] [warning] Here are the alphas: 2.01657, 0, 0
+[2024-05-15 13:27:02.565] [jointLog] [warning] EM alphas: 2.01657, 0, 0
+[2024-05-15 13:27:02.568] [jointLog] [warning] Here are the alphas: 2.01657, 0, 0
+[2024-05-15 13:27:02.613] [jointLog] [warning] EM alphas: 2.01657, 0, 0
+[2024-05-15 13:27:02.616] [jointLog] [warning] Here are the alphas: 2.01657, 0, 0
+[2024-05-15 13:27:02.660] [jointLog] [warning] EM alphas: 2.01657, 0, 0
+[2024-05-15 13:27:02.663] [jointLog] [warning] Here are the alphas: 2.01657, 0, 0
+[2024-05-15 13:27:02.708] [jointLog] [warning] EM alphas: 2.01657, 0, 0
+[2024-05-15 13:27:02.711] [jointLog] [warning] Here are the alphas: 2.01657, 0, 0
+[2024-05-15 13:27:02.755] [jointLog] [warning] EM alphas: 2.01658, 0, 0
+[2024-05-15 13:27:02.759] [jointLog] [warning] Here are the alphas: 2.01658, 0, 0
+[2024-05-15 13:27:02.803] [jointLog] [warning] EM alphas: 2.01658, 0, 0
+[2024-05-15 13:27:02.806] [jointLog] [warning] Here are the alphas: 2.01658, 0, 0
+[2024-05-15 13:27:02.851] [jointLog] [warning] EM alphas: 2.01658, 0, 0
+[2024-05-15 13:27:02.854] [jointLog] [warning] Here are the alphas: 2.01658, 0, 0
+[2024-05-15 13:27:02.898] [jointLog] [warning] EM alphas: 2.01658, 0, 0
+[2024-05-15 13:27:02.902] [jointLog] [warning] Here are the alphas: 2.01658, 0, 0
+[2024-05-15 13:27:02.946] [jointLog] [warning] EM alphas: 2.01658, 0, 0
+[2024-05-15 13:27:02.949] [jointLog] [warning] Here are the alphas: 2.01658, 0, 0
+[2024-05-15 13:27:02.993] [jointLog] [warning] EM alphas: 2.01658, 0, 0
+[2024-05-15 13:27:02.997] [jointLog] [warning] Here are the alphas: 2.01658, 0, 0
+[2024-05-15 13:27:03.042] [jointLog] [warning] EM alphas: 2.01658, 0, 0
+[2024-05-15 13:27:03.045] [jointLog] [warning] Here are the alphas: 2.01658, 0, 0
+[2024-05-15 13:27:03.089] [jointLog] [warning] EM alphas: 2.01658, 0, 0
+[2024-05-15 13:27:03.093] [jointLog] [warning] Here are the alphas: 2.01658, 0, 0
+[2024-05-15 13:27:03.137] [jointLog] [warning] EM alphas: 2.01658, 0, 0
+[2024-05-15 13:27:03.140] [jointLog] [warning] Here are the alphas: 2.01658, 0, 0
+[2024-05-15 13:27:03.184] [jointLog] [warning] EM alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.188] [jointLog] [warning] Here are the alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.232] [jointLog] [warning] EM alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.235] [jointLog] [warning] Here are the alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.280] [jointLog] [warning] EM alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.283] [jointLog] [warning] Here are the alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.327] [jointLog] [warning] EM alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.331] [jointLog] [warning] Here are the alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.375] [jointLog] [warning] EM alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.378] [jointLog] [warning] Here are the alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.422] [jointLog] [warning] EM alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.426] [jointLog] [warning] Here are the alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.470] [jointLog] [warning] EM alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.473] [jointLog] [warning] Here are the alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.518] [jointLog] [warning] EM alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.521] [jointLog] [warning] Here are the alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.565] [jointLog] [warning] EM alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.569] [jointLog] [warning] Here are the alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.613] [jointLog] [warning] EM alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.616] [jointLog] [warning] Here are the alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.660] [jointLog] [warning] EM alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.664] [jointLog] [warning] Here are the alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.708] [jointLog] [warning] EM alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.711] [jointLog] [warning] Here are the alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.755] [jointLog] [warning] EM alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.759] [jointLog] [warning] Here are the alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.803] [jointLog] [warning] EM alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.807] [jointLog] [warning] Here are the alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.851] [jointLog] [warning] EM alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.854] [jointLog] [warning] Here are the alphas: 2.01659, 0, 0
+[2024-05-15 13:27:03.898] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:03.902] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:03.946] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:03.949] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:03.994] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:03.997] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.042] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.045] [jointLog] [info] iteration = 100 | max rel diff. = 0.150557
+[2024-05-15 13:27:04.045] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.089] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.093] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.137] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.140] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.184] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.188] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.232] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.235] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.280] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.283] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.327] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.331] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.375] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.378] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.423] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.426] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.470] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.474] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.518] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.521] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.565] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.569] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.613] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.616] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.661] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.664] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.708] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.712] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.756] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.759] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.804] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.807] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.852] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.855] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.899] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.903] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.947] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.950] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.994] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:04.998] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.042] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.046] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.090] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.093] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.138] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.141] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.185] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.189] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.233] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.236] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.281] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.284] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.328] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.331] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.376] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.379] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.424] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.427] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.471] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.475] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.519] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.522] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.567] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.570] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.615] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.618] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.663] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.666] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.710] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.714] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.758] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.761] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.806] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.809] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.854] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.858] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.902] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.906] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.950] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.954] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:05.998] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.001] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.046] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.049] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.094] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.097] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.141] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.145] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.189] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.192] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.237] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.240] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.285] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.288] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.332] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.335] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.380] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.383] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.427] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.431] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.475] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.479] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.523] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.526] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.570] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.574] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.618] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.622] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.666] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.669] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.714] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.717] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.761] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.765] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.809] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.813] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.857] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.860] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.905] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.908] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.952] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:06.956] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.000] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.004] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.049] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.052] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.097] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.100] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.145] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.148] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.193] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.196] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.240] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.244] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.288] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.291] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.336] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.339] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.384] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.387] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.432] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.435] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.479] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.483] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.527] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.531] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.575] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.578] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.623] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.626] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.670] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.674] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.718] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.722] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.766] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.769] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.814] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.817] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.862] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.865] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.910] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.913] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.958] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:07.961] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.005] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.009] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.053] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.056] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.101] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.104] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.149] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.152] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.196] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.200] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.244] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.247] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.292] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.295] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.339] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.343] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.387] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.390] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.435] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.439] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.483] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.486] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.531] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.534] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.578] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.582] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.626] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.629] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.674] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.677] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.721] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.725] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.769] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.772] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.817] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.820] [jointLog] [info] iteration = 200 | max rel diff. = 0.0671804
+[2024-05-15 13:27:08.820] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.865] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.868] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.912] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.916] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.960] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:08.964] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.008] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.011] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.056] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.059] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.104] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.107] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.152] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.155] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.199] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.203] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.247] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.251] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.295] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.298] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.343] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.346] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.390] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.394] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.438] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.442] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.486] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.489] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.534] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.538] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.582] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.585] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.630] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.633] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.678] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.681] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.725] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.729] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.773] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.776] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.821] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.824] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.868] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.872] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.916] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.919] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.964] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:09.967] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.012] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.015] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.067] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.071] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.117] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.120] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.165] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.168] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.213] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.216] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.260] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.264] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.308] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.312] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.356] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.360] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.404] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.408] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.452] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.456] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.500] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.503] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.548] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.551] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.596] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.599] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.644] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.648] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.692] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.695] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.740] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.743] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.788] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.791] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.835] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.839] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.883] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.887] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.931] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.935] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.980] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:10.983] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.028] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.032] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.076] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.079] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.124] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.128] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.172] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.176] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.220] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.224] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.268] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.271] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.316] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.319] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.364] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.367] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.411] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.415] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.459] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.463] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.507] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.511] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.555] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.558] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.603] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.606] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.651] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.655] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.699] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.702] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.747] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.750] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.795] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.798] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.843] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.846] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.891] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.894] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.939] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.942] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.986] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:11.990] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.034] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.038] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.082] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.086] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.130] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.134] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.178] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.182] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.226] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.230] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.274] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.277] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.322] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.325] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.370] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.373] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.418] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.421] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.465] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.469] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.513] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.517] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.561] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.564] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.609] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.613] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.657] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.661] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.705] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.709] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.753] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.757] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.801] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.805] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.849] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.853] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.897] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.900] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.945] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.948] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.992] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:12.996] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.041] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.044] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.089] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.092] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.137] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.140] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.185] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.188] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.233] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.236] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.281] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.284] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.329] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.332] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.377] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.380] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.425] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.428] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.473] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.476] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.521] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.524] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.569] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.572] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.617] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.620] [jointLog] [info] iteration = 300 | max rel diff. = 0.0451923
+[2024-05-15 13:27:13.620] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.665] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.668] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.713] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.716] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.761] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.764] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.809] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.812] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.857] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.860] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.905] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.908] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.953] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:13.956] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.001] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.004] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.049] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.052] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.097] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.100] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.145] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.148] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.193] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.197] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.241] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.244] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.289] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.292] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.337] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.340] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.385] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.388] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.433] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.436] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.481] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.484] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.529] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.532] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.577] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.580] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.625] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.628] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.673] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.676] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.721] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.725] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.769] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.773] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.817] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.821] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.865] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.869] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.913] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.917] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.961] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:14.965] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.010] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.014] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.059] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.063] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.107] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.111] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.156] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.159] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.204] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.207] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.252] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.255] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.300] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.303] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.348] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.351] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.396] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.399] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.444] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.447] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.492] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.495] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.540] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.543] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.588] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.592] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.637] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.640] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.685] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.688] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.733] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.736] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.781] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.785] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.829] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.833] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.878] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.881] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.925] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.929] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.973] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:15.977] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.021] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.025] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.070] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.073] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.118] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.122] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.167] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.170] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.215] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.218] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.263] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.266] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.311] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.315] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.359] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.363] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.407] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.411] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.455] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.459] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.504] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.507] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.552] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.555] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.600] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.603] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.648] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.651] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.696] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.699] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.744] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.747] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.792] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.796] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.840] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.844] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.889] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.892] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.937] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.940] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.985] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:16.988] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.033] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.036] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.081] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.084] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.129] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.132] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.177] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.180] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.225] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.228] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.273] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.276] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.321] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.325] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.369] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.373] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.417] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.421] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.465] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.469] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.513] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.517] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.561] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.565] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.610] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.614] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.658] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.662] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.706] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.710] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.754] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.758] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.803] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.806] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.851] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.854] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.899] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.902] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.947] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.950] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.995] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:17.998] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.043] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.047] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.091] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.095] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.140] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.143] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.188] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.191] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.236] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.239] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.284] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.287] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.332] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.335] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.380] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.383] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.428] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.432] [jointLog] [info] iteration = 400 | max rel diff. = 0.0316814
+[2024-05-15 13:27:18.432] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.476] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.480] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.524] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.528] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.573] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.576] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.621] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.624] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.669] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.673] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.717] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.721] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.766] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.769] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.814] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.817] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.862] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.866] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.910] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.914] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.959] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:18.962] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.007] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.010] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.055] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.058] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.103] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.107] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.152] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.155] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.201] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.204] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.249] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.252] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.297] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.300] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.345] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.349] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.394] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.397] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.442] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.445] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.490] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.494] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.539] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.542] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.587] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.591] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.636] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.639] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.684] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.687] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.732] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.735] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.780] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.784] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.829] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.832] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.877] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.881] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.926] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.929] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.974] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:19.977] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.022] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.026] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.071] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.075] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.120] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.123] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.168] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.171] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.216] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.219] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.264] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.268] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.312] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.316] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.361] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.364] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.409] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.413] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.457] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.461] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.506] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.509] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.554] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.557] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.603] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.606] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.651] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.655] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.700] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.703] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.748] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.752] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.797] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.800] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.845] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.849] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.894] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.897] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.942] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.945] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.990] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:20.993] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.039] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.042] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.087] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.091] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.135] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.139] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.184] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.187] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.233] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.237] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.282] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.285] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.330] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.334] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.378] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.382] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.427] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.430] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.475] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.479] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.524] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.527] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.572] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.576] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.621] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.624] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.669] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.673] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.718] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.721] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.766] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.770] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.815] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.818] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.863] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.866] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.912] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.915] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.960] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:21.964] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.009] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.012] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.057] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.061] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.106] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.109] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.154] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.158] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.203] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.206] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.251] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.255] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.300] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.303] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.348] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.352] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.397] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.400] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.446] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.449] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.494] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.497] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.542] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.546] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.591] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.594] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.639] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.643] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.688] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.691] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.737] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.740] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.786] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.789] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.834] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.838] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.883] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.886] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.932] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.935] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.980] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:22.983] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.028] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.032] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.077] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.081] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.126] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.129] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.174] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.178] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.223] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.226] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.271] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.275] [jointLog] [info] iteration = 500 | max rel diff. = 0.0274219
+[2024-05-15 13:27:23.275] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.320] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.323] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.368] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.372] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.417] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.420] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.465] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.469] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.514] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.517] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.562] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.566] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.611] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.614] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.660] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.663] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.708] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.712] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.757] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.761] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.806] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.809] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.855] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.858] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.903] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.907] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.952] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:23.955] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.001] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.004] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.054] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.057] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.102] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.106] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.151] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.154] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.200] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.203] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.248] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.252] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.297] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.301] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.346] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.349] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.395] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.398] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.443] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.447] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.492] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.496] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.541] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.544] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.590] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.593] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.638] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.642] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.687] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.690] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.736] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.739] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.785] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.788] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.833] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.837] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.882] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.885] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.931] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.934] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.980] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:24.983] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.029] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.032] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.077] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.081] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.126] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.129] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.175] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.178] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.223] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.227] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.272] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.276] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.321] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.324] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.370] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.373] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.418] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.422] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.467] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.470] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.516] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.519] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.564] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.568] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.613] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.617] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.662] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.665] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.711] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.714] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.759] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.763] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.808] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.812] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.857] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.860] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.906] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.909] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.955] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:25.958] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.003] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.007] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.052] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.056] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.101] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.105] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.151] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.154] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.200] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.203] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.249] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.252] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.297] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.301] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.347] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.351] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.396] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.399] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.445] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.448] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.493] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.497] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.542] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.546] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.591] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.595] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.640] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.644] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.689] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.693] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.738] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.742] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.787] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.791] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.836] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.840] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.885] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.889] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.934] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.937] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.983] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:26.986] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.032] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.035] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.080] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.084] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.129] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.133] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.178] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.181] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.227] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.230] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.275] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.279] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.324] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.328] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.373] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.376] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.422] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.425] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.471] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.474] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.520] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.523] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.569] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.572] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.617] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.621] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.666] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.670] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.715] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.719] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.764] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.768] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.813] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.817] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.862] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.866] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.911] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.915] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.960] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:27.964] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.010] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.013] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.059] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.062] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.108] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.111] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.157] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.160] [jointLog] [info] iteration = 600 | max rel diff. = 0.0201297
+[2024-05-15 13:27:28.160] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.206] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.209] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.255] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.258] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.304] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.307] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.353] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.356] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.402] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.405] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.451] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.454] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.500] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.504] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.549] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.553] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.598] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.602] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.647] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.651] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.704] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.707] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.754] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.758] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.803] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.807] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.853] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.856] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.901] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.905] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.950] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:28.954] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.000] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.003] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.049] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.052] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.098] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.101] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.147] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.150] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.196] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.199] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.245] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.248] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.294] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.297] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.343] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.346] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.392] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.395] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.441] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.444] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.490] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.493] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.539] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.543] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.588] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.592] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.638] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.641] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.687] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.690] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.736] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.739] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.785] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.788] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.834] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.838] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.883] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.886] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.932] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.936] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.981] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:29.985] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.030] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.034] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.079] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.083] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.128] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.132] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.178] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.181] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.227] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.230] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.275] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.279] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.324] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.328] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.374] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.377] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.423] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.426] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.472] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.475] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.521] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.524] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.570] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.574] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.619] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.623] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.668] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.672] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.717] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.721] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.767] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.770] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.816] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.819] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.865] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.869] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.914] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.917] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.963] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:30.967] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.012] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.016] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.062] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.065] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.111] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.114] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.160] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.163] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.209] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.213] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.258] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.262] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.310] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.314] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.363] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.366] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.412] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.416] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.462] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.466] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.512] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.516] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.562] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.565] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.611] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.614] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.660] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.664] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.710] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.713] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.759] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.762] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.808] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.811] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.858] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.861] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.907] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.910] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.956] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:31.959] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.005] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.009] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.055] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.058] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.104] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.107] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.153] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.157] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.202] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.206] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.252] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.255] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.301] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.305] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.350] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.354] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.400] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.403] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.449] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.453] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.499] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.502] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.548] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.552] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.598] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.601] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.647] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.650] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.696] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.700] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.746] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.749] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.796] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.799] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.845] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.848] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.894] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.898] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.944] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.947] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.993] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:32.996] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.043] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.046] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.092] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.095] [jointLog] [info] iteration = 700 | max rel diff. = 0.0174294
+[2024-05-15 13:27:33.095] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.141] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.145] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.190] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.194] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.240] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.243] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.289] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.292] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.341] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.344] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.395] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.398] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.444] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.447] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.493] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.497] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.543] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.547] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.593] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.596] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.642] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.645] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.691] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.694] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.740] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.744] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.790] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.793] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.840] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.843] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.889] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.892] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.938] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.942] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.988] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:33.991] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.037] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.041] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.087] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.090] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.136] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.140] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.186] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.189] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.235] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.238] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.284] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.288] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.334] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.337] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.383] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.387] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.433] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.436] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.482] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.486] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.532] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.535] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.581] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.585] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.631] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.634] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.680] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.684] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.730] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.733] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.779] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.783] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.829] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.832] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.878] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.882] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.928] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.931] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.977] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:34.980] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.027] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.030] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.076] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.080] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.126] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.129] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.175] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.179] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.225] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.228] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.275] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.278] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.324] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.328] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.374] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.377] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.423] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.427] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.473] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.477] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.523] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.526] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.572] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.576] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.622] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.625] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.671] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.675] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.721] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.724] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.770] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.774] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.820] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.823] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.870] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.873] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.919] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.922] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.969] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:35.972] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.018] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.022] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.069] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.072] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.118] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.121] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.167] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.171] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.217] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.220] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.266] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.270] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.316] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.319] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.365] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.369] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.415] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.418] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.464] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.468] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.514] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.517] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.564] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.567] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.614] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.617] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.663] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.666] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.713] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.716] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.762] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.766] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.812] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.815] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.861] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.865] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.911] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.914] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.960] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:36.964] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.010] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.013] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.060] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.064] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.110] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.114] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.160] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.163] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.209] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.213] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.259] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.262] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.308] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.311] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.358] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.361] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.408] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.411] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.457] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.461] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.507] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.510] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.556] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.559] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.606] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.609] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.655] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.659] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.705] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.709] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.755] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.758] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.805] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.808] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.854] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.858] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.904] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.907] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.953] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:37.957] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.003] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.007] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.053] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.056] [jointLog] [info] iteration = 800 | max rel diff. = 0.015963
+[2024-05-15 13:27:38.056] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.103] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.106] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.153] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.156] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.202] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.206] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.252] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.255] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.302] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.305] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.352] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.355] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.401] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.405] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.451] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.455] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.501] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.504] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.550] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.554] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.600] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.604] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.650] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.653] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.700] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.703] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.749] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.753] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.799] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.802] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.849] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.853] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.900] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.903] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.949] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.953] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:38.999] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.003] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.049] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.053] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.099] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.102] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.149] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.152] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.198] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.202] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.248] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.251] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.298] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.301] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.348] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.351] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.397] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.401] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.447] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.451] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.497] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.500] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.547] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.550] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.596] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.600] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.646] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.649] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.696] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.699] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.745] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.749] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.795] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.799] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.845] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.849] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.895] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.898] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.945] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.948] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.994] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:39.998] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.044] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.048] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.094] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.097] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.144] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.148] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.194] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.197] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.244] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.247] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.294] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.297] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.343] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.347] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.393] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.397] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.443] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.447] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.493] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.496] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.543] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.546] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.593] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.596] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.643] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.646] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.692] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.696] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.742] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.746] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.792] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.796] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.842] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.846] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.892] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.896] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.942] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.945] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.992] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:40.995] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.042] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.045] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.092] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.095] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.142] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.145] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.192] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.195] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.242] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.245] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.292] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.295] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.342] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.345] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.392] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.396] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.442] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.446] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.492] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.496] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.542] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.546] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.593] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.596] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.643] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.646] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.693] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.697] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.744] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.747] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.794] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.797] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.844] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.847] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.894] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.898] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.945] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.948] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.995] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:41.998] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.045] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.049] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.095] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.099] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.146] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.149] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.196] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.199] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.246] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.249] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.296] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.299] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.346] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.349] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.396] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.400] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.446] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.449] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.496] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.500] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.546] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.550] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.596] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.600] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.647] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.650] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.697] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.701] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.747] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.751] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.798] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.801] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.848] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.851] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.898] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.902] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.948] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.952] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:42.998] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.002] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.049] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.052] [jointLog] [info] iteration = 900 | max rel diff. = 0.0119186
+[2024-05-15 13:27:43.052] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.099] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.102] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.149] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.153] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.199] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.203] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.250] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.253] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.300] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.304] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.350] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.354] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.400] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.404] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.451] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.454] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.501] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.504] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.551] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.554] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.601] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.605] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.651] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.655] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.701] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.705] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.752] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.755] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.802] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.805] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.852] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.856] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.903] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.906] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.953] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:43.956] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.003] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.006] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.053] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.056] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.103] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.107] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.153] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.157] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.204] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.207] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.254] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.257] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.304] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.307] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.354] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.357] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.404] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.407] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.454] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.458] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.504] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.508] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.555] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.558] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.605] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.608] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.655] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.659] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.705] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.709] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.755] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.759] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.806] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.809] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.856] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.860] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.906] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.910] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.957] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:44.960] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.007] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.010] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.057] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.060] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.107] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.111] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.158] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.161] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.210] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.213] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.260] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.264] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.311] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.314] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.361] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.364] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.411] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.414] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.461] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.465] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.511] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.515] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.562] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.565] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.613] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.616] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.663] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.666] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.713] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.716] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.763] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.767] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.814] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.817] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.864] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.867] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.914] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.917] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.964] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:45.968] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.015] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.018] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.065] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.068] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.115] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.119] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.166] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.169] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.216] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.219] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.266] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.269] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.316] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.320] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.366] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.370] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.417] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.420] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.467] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.470] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.517] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.520] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.567] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.571] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.618] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.621] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.667] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.671] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.718] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.721] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.768] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.771] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.819] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.822] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.870] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.873] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.920] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.924] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.971] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:46.974] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.022] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.025] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.072] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.075] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.123] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.126] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.173] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.176] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.223] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.226] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.273] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.277] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.323] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.327] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.373] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.377] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.423] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.427] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.474] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.477] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.524] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.527] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.574] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.577] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.625] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.628] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.675] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.678] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.725] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.729] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.775] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.779] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.826] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.829] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.876] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.879] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.926] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.930] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.976] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:47.980] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.027] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.030] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.077] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.080] [jointLog] [info] iteration = 1,000 | max rel diff. = 0.017656
+[2024-05-15 13:27:48.080] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.127] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.131] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.177] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.181] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.228] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.231] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.278] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.281] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.328] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.332] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.378] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.382] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.429] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.432] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.479] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.482] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.529] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.533] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.579] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.583] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.630] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.633] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.680] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.684] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.731] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.734] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.781] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.784] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.831] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.835] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.882] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.885] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.932] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.935] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.982] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:48.985] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.032] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.036] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.083] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.086] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.133] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.137] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.183] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.187] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.234] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.237] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.284] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.288] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.335] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.338] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.385] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.389] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.436] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.439] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.486] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.490] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.536] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.540] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.587] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.590] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.638] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.641] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.688] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.692] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.739] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.742] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.789] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.793] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.840] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.843] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.890] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.894] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.941] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.944] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.991] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:49.995] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.042] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.046] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.093] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.097] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.144] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.147] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.194] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.198] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.245] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.249] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.296] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.299] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.346] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.350] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.397] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.401] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.448] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.451] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.498] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.501] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.548] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.552] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.599] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.603] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.650] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.653] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.700] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.704] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.751] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.754] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.802] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.805] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.852] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.856] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.903] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.906] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.954] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:50.957] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.004] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.008] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.055] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.058] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.106] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.109] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.156] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.160] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.207] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.210] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.258] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.261] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.308] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.312] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.359] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.362] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.410] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.413] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.460] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.464] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.511] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.515] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.562] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.566] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.613] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.616] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.664] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.667] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.715] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.719] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.767] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.770] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.818] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.821] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.869] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.872] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.920] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.923] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.972] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:51.975] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.023] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.026] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.073] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.077] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.124] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.128] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.175] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.179] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.226] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.230] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.277] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.280] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.328] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.331] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.378] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.382] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.429] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.432] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.480] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.483] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.530] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.534] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.581] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.584] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.632] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.635] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.683] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.686] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.734] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.737] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.785] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.789] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.836] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.839] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.886] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.890] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.937] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.940] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.988] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:52.991] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.039] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.042] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.090] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.093] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.140] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.144] [jointLog] [info] iteration = 1,100 | max rel diff. = 0.0136989
+[2024-05-15 13:27:53.144] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.191] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.194] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.242] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.245] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.292] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.296] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.343] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.347] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.394] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.397] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.445] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.448] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.496] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.499] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.547] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.550] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.598] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.601] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.649] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.652] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.700] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.703] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.751] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.754] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.802] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.805] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.852] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.856] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.903] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.907] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.954] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:53.958] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.005] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.009] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.056] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.060] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.107] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.111] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.158] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.162] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.209] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.213] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.260] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.264] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.311] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.314] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.362] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.365] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.413] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.416] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.464] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.467] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.515] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.518] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.565] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.569] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.616] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.620] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.667] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.670] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.718] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.721] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.769] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.772] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.819] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.823] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.871] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.874] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.922] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.925] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.973] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:54.976] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.024] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.027] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.075] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.078] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.126] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.129] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.177] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.180] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.228] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.231] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.279] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.282] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.330] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.333] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.381] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.384] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.432] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.435] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.483] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.486] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.534] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.537] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.585] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.588] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.636] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.640] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.688] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.691] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.739] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.742] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.790] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.794] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.842] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.845] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.892] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.896] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.944] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.947] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.995] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:55.998] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.046] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.049] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.097] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.101] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.148] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.152] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.199] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.203] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.251] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.254] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.302] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.306] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.353] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.356] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.404] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.408] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.455] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.459] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.507] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.510] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.558] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.561] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.609] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.613] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.670] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.673] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.721] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.724] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.772] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.775] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.823] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.827] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.874] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.878] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.925] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.929] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.977] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:56.980] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.028] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.031] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.080] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.084] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.131] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.135] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.183] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.186] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.234] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.238] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.285] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.289] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.336] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.340] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.388] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.391] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.439] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.442] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.490] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.494] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.542] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.545] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.593] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.597] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.645] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.648] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.696] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.700] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.748] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.751] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.799] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.803] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.851] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.854] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.902] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.905] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.953] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:57.957] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.005] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.008] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.056] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.060] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.108] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.112] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.160] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.163] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.211] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.215] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.262] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.266] [jointLog] [info] iteration = 1,200 | max rel diff. = 0.0105118
+[2024-05-15 13:27:58.266] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.314] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.317] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.365] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.368] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.416] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.420] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.468] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.471] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.519] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.522] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.571] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.574] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.622] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.625] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.673] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.677] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.725] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.728] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.776] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.780] [jointLog] [warning] Here are the alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.828] [jointLog] [warning] EM alphas: 2.0166, 0, 0
+[2024-05-15 13:27:58.831] [jointLog] [info] iteration = 1,212 | max rel diff. = 0.009334
+[2024-05-15 13:27:58.850] [jointLog] [info] Finished optimizer
+[2024-05-15 13:27:58.850] [jointLog] [info] writing output 
 

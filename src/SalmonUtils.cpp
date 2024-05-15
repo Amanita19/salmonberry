@@ -2043,6 +2043,9 @@ bool processQuantOptions(SalmonOpts& sopt,
     if(sopt.useEM) {
       sopt.useVBOpt = false;
     }
+    if(sopt.useBoth) {
+      sopt.useVBOpt = false;
+    }
   }
 
   {
