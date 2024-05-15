@@ -1,1 +1,6 @@
 \section{Methods}
+We ran this on CBCB’s partion where we were able to allocate 5000 GB per run
+We began by reviewing and editing Salmon’s source code. A bash script was implemented to download our datasets. Another script was also written to run our samples using EM, VBEM, and a combination of the VBEM and EM algorithms. 
+First, we ran unaltered Salmon on our datasets using EM and VBEM. For each pass that used VBEM, we specified a prior 10-5 through 101. 
+We then ran the same datasets on Salmon using the average of both the EM and VBEM algorithms. We ran the EM and VBEM algorithms on the same data, producing an array. For each index in this array, the data was averaged and inserted into a new array for use in the final calculations. We again used priors of 10-5 through 101 when considering the VBEM algorithm. 
+Finally, we compared the results of these passes using the ground truth of the synthetic data. We calculated the MARD of our results. We also calculated the Spearman Correlation with a sample size of n1 = 24, n2 = 24, and a two-sided Mann-Whitney U test. 
