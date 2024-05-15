@@ -1,34 +1,3 @@
-%Version 3 October 2023
-% See section 11 of the User Manual for version history
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                                                                 %%
-%% Please do not use \input{...} to include other tex files.       %%
-%% Submit your LaTeX manuscript as one .tex document.              %%
-%%                                                                 %%
-%% All additional figures and files should be attached             %%
-%% separately and not embedded in the \TeX\ document itself.       %%
-%%                                                                 %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%\documentclass[referee,sn-basic]{sn-jnl}% referee option is meant for double line spacing
-
-%%=======================================================%%
-%% to print line numbers in the margin use lineno option %%
-%%=======================================================%%
-
-%%\documentclass[lineno,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
-
-%%======================================================%%
-%% to compile with pdflatex/xelatex use pdflatex option %%
-%%======================================================%%
-
-%%\documentclass[pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
-
-
-%%Note: the following reference styles support Namedate and Numbered referencing. By default the style follows the most common style. To switch between the options you can add or remove �Numbered� in the optional parenthesis. 
-%%The option is available for: sn-basic.bst, sn-vancouver.bst, sn-chicago.bst%  
- 
 %%\documentclass[sn-nature]{sn-jnl}% Style for submissions to Nature Portfolio journals
 %%\documentclass[sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
 \documentclass[sn-mathphys-num]{sn-jnl}% Math and Physical Sciences Numbered Reference Style 
@@ -37,9 +6,6 @@
 %%\documentclass[sn-vancouver,Numbered]{sn-jnl}% Vancouver Reference Style
 %%\documentclass[sn-apa]{sn-jnl}% APA Reference Style 
 %%\documentclass[sn-chicago]{sn-jnl}% Chicago-based Humanities Reference Style
-
-%%%% Standard Packages
-%%<additional latex packages if required can be included here>
 
 \usepackage{graphicx}%
 \usepackage{multirow}%
@@ -55,22 +21,7 @@
 \usepackage{algorithmicx}%
 \usepackage{algpseudocode}%
 \usepackage{listings}%
-%%%%
 
-%%%%%=============================================================================%%%%
-%%%%  Remarks: This template is provided to aid authors with the preparation
-%%%%  of original research articles intended for submission to journals published 
-%%%%  by Springer Nature. The guidance has been prepared in partnership with 
-%%%%  production teams to conform to Springer Nature technical requirements. 
-%%%%  Editorial and presentation requirements differ among journal portfolios and 
-%%%%  research disciplines. You may find sections in this template are irrelevant 
-%%%%  to your work and are empowered to omit any such section if allowed by the 
-%%%%  journal you intend to submit to. The submission guidelines and policies 
-%%%%  of the journal take precedence. A detailed User Manual is available in the 
-%%%%  template package for technical guidance.
-%%%%%=============================================================================%%%%
-
-%% as per the requirement new theorem styles can be included as shown below
 \theoremstyle{thmstyleone}%
 \newtheorem{theorem}{Theorem}%  meant for continuous numbers
 %%\newtheorem{theorem}{Theorem}[section]% meant for sectionwise numbers
@@ -90,7 +41,7 @@
 
 \begin{document}
 
-\title{Article}
+\title{Final paper}
 
 %%=============================================================%%
 %% GivenName	-> \fnm{Joergen W.}
@@ -622,7 +573,7 @@
 %% file, and delete the associated \verb+\bibliography+ commands.                            %%
 %%===========================================================================================%%
 
-\bibliography{sn-bibliography}% common bib file
+\bibliography{export-data}% common bib file
 %% if required, the content of .bbl file can be included here once bbl is generated
 %%\input sn-article.bbl
 

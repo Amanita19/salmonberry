@@ -1,3 +1,112 @@
 \section{Background}
+
+Transcriptome introduction: splicing, gene expression, SVs, etc
+
+Quick explanation of RNA-Seq and its role in quantifying transcriptome
+
+Problem:
+The existence of different isoforms makes the problem of transcript quantification difficult. While we also want to map a read to a gene, we also want to get an estimate of the abundances of each isoform given a set of reads. . 
+
+
 \subsection{Salmon}
+Salmon utilizes raw reads or transcriptome aligned reads in a quasi-mapping phase.\cite{patro_salmon_2017} It then moves to an online inference phase where it uses the EM algorithm to estimate the ‘foreground’ bias models and compute the equivalence class weights. The execution then moves to offline inference where the user can specify the inference algorithm of EM or VBEM. The program gives the initial abundances and fragment equivalence classes to these algorithms. Optionally, using the converged abundances and fragment equivalence classes,  Salmon draws and saves estimates from the posterior distribution using Gibbs or bootstrap sampling. 
+Salmon utilizes relatively little memory to quantify abundance estimates from RNA sequence reads. 
+Given a known transcript and a set of sequenced fragments, Salmon aims to quantify the relative abundance of each transcript in the sample. 
+Salmon takes into account sample-specific biases to improve accuracy. 
+When these biases are not accounted for, calculations like the false discovery rate cannot be controlled for. 
+Using multiple inference steps, Salmon estimates abundances using either the VBEM or EM inference algorithms. 
+However, both these methods have drawbacks. They both return point estimates of abundances, 
+but we are uncertain about the returned estimates without ground truth. Further, the choice of 
+Bayesian priors used in the VBEM algorithm also has considerations. 
+A small prior leads to sparser results than EM. 
+However, a larger prior may result in more estimated non-zero abundance than EM. 
+Prior simulated tests \cite[]{keylist} show than VBEM with a small prior can lead to more accurate estimates. 
+Given the trade offs of the two algorithms, we sought to know if the averaged prediction for 
+EM and VBEM inference is better than one algorithm or another. 
+Further, if this ensemble estimate is better, could it be improved by varying the Bayesian priors.
+
 \subsection{EM \& VBEM}
+
+The Expectation Maximization (EM) algorithm optimizes the likelihood of the parameters given the data. This algorithm returns a point estimate of the abundances. 
+This algorithm is  the default of Salmon.
+\\
+The Variational Bayesian Expectation Maximization (VBEM) algorithm accounts for the sparsity of the data. It takes a Bayesian nucleotide prior that controls for the sparsity of the data. The default prior for Salmon was $1 \times 10 ^{-2}$.
+
+Each transcriptome \(\mathcal{T}\) is composed of transcripts \(t\).
+Each transcript is a nucleotide sequence which can be described through
+its length \(l\), effective length \(\tilde l\), and its count
+\(c\)---which is the number of times that \(t\) occurs in a given
+sample. There are \(M\) transcripts in a given transcriptome.
+
+The probability that a given fragment originates from a transcript \(t\)
+depends on the length of that transcript relative to all other
+transcripts in the transcriptome. We define this nucleotide fraction
+\(\eta\) for a given transcript \(t\) as
+
+\[\eta_i= \dfrac{c_i \cdot \tilde l _i}{\sum^{M}_{\pmb{j} = 1}c_j \cdot \tilde l _j}\]
+
+We obtain a transcript fraction \(\tau\) for a given transcript \(t\) by
+normalizing its nucleotide fraction against the effective length of all
+transcripts.
+
+\[\eta_i= \dfrac{c_i \cdot \tilde l _i}{\sum^{M}_{\pmb{j} = 1}c_j \cdot \tilde l _j}\]
+
+Let's say that the true nucleotide fraction for a transcript \(t\) is
+\(\pmb{\eta}\). We can describe the probability of observing a set of
+sequenced fragments \(\mathcal{F}\) as a
+
+\[\Pr\left( \mathcal{F}| \pmb{\eta}, Z, \mathcal{T} \right) = \prod^{N}_{j=1} \Pr\left( f_j| \pmb{\eta}, Z, \mathcal{T} \right) = \prod^{N}_{j=1}\sum^{M}_{i=1} \Pr\left( t_i| \pmb{\eta} \cdot \Pr\left( f_j|t_i,z _{ij} =1 \right)  \right)\]
+
+where \(N\) is the number of fragments in \(\mathcal{F}\), \(Z\) is a
+relationship matrix where \(z _{ij} =1\) when fragment \(f_j\) is
+derived from \(t_i\).
+
+We want to obtain \(\pmb{\alpha}\), which is the estimated number of
+reads from each transcript. We describe the maximum likelihood estimates
+as:
+
+\[\mathcal{L} \left( \pmb{\alpha} |\mathcal{F}, \pmb{Z},\mathcal{T} \right)  = \prod^{N}_{j=1} \sum^{M}_{i=1} \hat \eta_i \Pr\left(  f_j|t_i\right)\]
+
+Written in terms of equivalence classes \(\pmb{C}\)
+
+\[\mathcal{L} \left( \pmb{\alpha} |\mathcal{F}, \pmb{Z},\mathcal{T} \right)  = \prod^{}_{\mathcal{C}^j \in \pmb{C}} \left( \sum_{t_i \in  \pmb{t}^j} \hat \eta_i w_t^j\right) ^{d^{j}}\]
+
+The abundances \(\pmb{\hat \eta}\) are computed directly from
+\(\pmb{\alpha}\)
+
+\[\hat \eta_i= \dfrac{\alpha_i}{\sum_j \alpha_j}\]
+
+Then we apply an update function
+
+\[\alpha_i ^{u+1} = \sum^{}_{\mathcal{C}^j \in \pmb{\mathcal{C}}} d ^{j} \left( \dfrac{\alpha_i^u w_i^j}{\sum^{}_{t_k \in \pmb{t}}} j \alpha^u_k w_k^j\right)\]
+
+Until the maximum relative difference in \( \pmb{\alpha}\) is
+
+\[\Delta \left( \alpha^u, \alpha ^{u+1} \right) = \mathrm{max} \dfrac{\left| a_i^u  - \alpha_i ^{u+1}\right| }{ \alpha_i ^{u+1}} < 1 \times 10 ^{-2}\]
+
+for all \(\alpha_i ^{u+1} > 1 \times 10 ^{-8}\), at which point we
+derive the estimated nucleotide fraction
+
+\[\hat \eta_i =\dfrac{\alpha_i ^{\prime} }{ \sum_j \alpha ^{\prime} _j}\]
+
+Variational Bayes Optimization
+
+Optionally, the we can apply variational bayeseian optimization where
+the update function is
+
+\[\alpha_i ^{u+1} = \sum^{}_{\mathcal{C}^j \in \pmb{\mathcal{C}}} d ^{j} \left( \dfrac{e ^{ \gamma ^u_i} e_i^j}{\sum^{}_{t_k \in \pmb{t}} j e ^{\gamma ^u _k}w^j_k} \right)\]
+
+where
+
+\[\gamma^u_i = \Psi \left( \sum^{M}_{k=1} \alpha^0_k + \alpha^u+_k \right)\]
+
+where \(\Psi\) is the digamma function and the expected value of
+nucleotide fractions can be expressed as
+\[
+$$
+\begin{align*}
+	\mathbb{E} \left( \eta_i \right) &= \dfrac{\alpha_i^0 + \alpha_i ^{\prime} }{\sum^{}_{j} \alpha^0_j + a ^{\prime} _j}= \dfrac{a_i^0 + \alpha_i ^{\prime} }{\hat \alpha^0 +N}\\
+	\hat \alpha^0 &= \sum^{M}_{i = 1} \alpha_i^0
+\end{align*}
+$$
+\]
