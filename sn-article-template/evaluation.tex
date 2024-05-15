@@ -1,0 +1,16 @@
+\section{Evaluation}
+\[
+    \mathrm{ARD}_i = \begin{cases}
+        0 &\quad\text{if}\quad x_i = y_i = 0\\
+        \dfrac{\left| x_i-y_i \right| }{x_i-y_i} &\quad\text{otherwise}\quad
+    \end{cases}
+\]
+
+\[
+    \mathrm{MARD} = \frac{1}{M} \sum^{M}_{i = 1}\mathrm{ARD}_i
+\]
+\subsection{Spearman Correlation}
+\[
+    \rho = 1 - \dfrac{6 \sum{d^2_i}}{n(n^2-1)}
+\]
+\subsection{Mann–Whitney U Test}
