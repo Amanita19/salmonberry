@@ -1,5 +1,6 @@
 \section{Background}
-A key characteristic of many newly-formed eukaryotic RNA sequences is the inclusion of non-coding and coding regions, which are often referred to as introns and exons. 
+A key characteristic of many newly-formed eukaryotic RNA sequences is the 
+inclusion of non-coding and coding regions, which are often referred to as introns and exons. 
 Prior to translation, transcript maturation must occur via splicing, 
 a process that revolves around the displacement of introns from the mRNA sequence. 
 However, depending on environmental conditions and sequence variations, 
@@ -27,7 +28,22 @@ In the past, Salmon was developed to address this particular issue.
 Given a known transcript and a set of sequenced fragments, it quantifies the relative abundance of each transcript in the sample using a dual-phase inference procedure. Salmon improves accuracy compared to other models, because it takes into account sample-specific biases to improve accuracy. When these biases are not accounted for, calculations like the false discovery rate cannot be controlled for. Using multiple inference steps, Salmon improves its abundance estimates using either the VBEM or EM inference algorithms. However, both methods have drawbacks. Both algorithms return point estimates of abundances, and we are uncertain about the returned estimates without ground truth. Further, the choice of  Bayesian priors used in the VBEM algorithm also has considerations. A small prior leads to sparser results than EM. However, a larger prior may result in more estimated non-zero abundance than EM. Prior simulated tests [Salmon documentation] show that VBEM with a small prior can lead to more accurate estimates. However, there has been much research into improving the results of these algorithms such as model averaging [citation]. Given the trade offs of the two algorithms, we sought to know if the averaged prediction for EM and VBEM inference is better than one algorithm or another. Further, if this ensemble estimate is better, could it be improved by varying the Bayesian priors.
 We have found that the average of these outputs [tie in results]
 
-
+\subsection{Salmon}
+Salmon uses a dual-phase inference procedure to provide fast and accurate estimates. 
+In an online and offline step, Salmon is able to calculate and improve the abundance 
+estimates for a transcript based on fragment GC-content and positional biases. 
+Salmon initially utilizes raw reads in a quasi-mapping phase where it performs direct 
+quantification instead of enacting a traditional alignment. 
+Salmon then moves to an online inference phase. 
+Here, Salmon uses a variant of stochastic, collapsed variational Bayesian inference to solve 
+a variation Bayesian inference problem. 
+In this phase, Salmon estimates the initial expression levels, auxiliary parameters, 
+the ‘foreground’ bias models, and fragment equivalence classes.In the offline phase, 
+Salmon improves the estimates it calculated in the online phase. Here, the user can 
+specify the inference algorithm of EM or VBEM. The chosen algorithm runs to convergence 
+on this data, outputting an optimized array of abundances. 
+Optionally, using the converged abundances and fragment equivalence classes, 
+Salmon can also draw and save estimates from the posterior distribution using Gibbs or bootstrap sampling. 
 \subsection{EM \& VBEM}
 
 The Expectation Maximization (EM) algorithm optimizes the likelihood of the parameters given the data. This algorithm returns a point estimate of the abundances. 
@@ -58,7 +74,14 @@ Let's say that the true nucleotide fraction for a transcript \(t\) is
 \(\pmb{\eta}\). We can describe the probability of observing a set of
 sequenced fragments \(\mathcal{F}\) as a
 
-\[\Pr\left( \mathcal{F}| \pmb{\eta}, Z, \mathcal{T} \right) = \prod^{N}_{j=1} \Pr\left( f_j| \pmb{\eta}, Z, \mathcal{T} \right) = \prod^{N}_{j=1}\sum^{M}_{i=1} \Pr\left( t_i| \pmb{\eta} \cdot \Pr\left( f_j|t_i,z _{ij} =1 \right)  \right)\]
+\[
+$$	
+\begin{align*}
+	\Pr\left( \mathcal{F}| \pmb{\eta}, Z, \mathcal{T} \right) &= \prod^{N}_{j=1} \Pr\left( f_j| \pmb{\eta}, Z, \mathcal{T} \right)\\
+	&= \prod^{N}_{j=1}\sum^{M}_{i=1} \Pr\left( t_i| \pmb{\eta} \cdot \Pr\left( f_j|t_i,z _{ij} =1 \right)  \right)
+\end{align*}
+$$
+\]
 
 where \(N\) is the number of fragments in \(\mathcal{F}\), \(Z\) is a
 relationship matrix where \(z _{ij} =1\) when fragment \(f_j\) is
