@@ -1,0 +1,14 @@
+{
+    "salmon_version": "1.10.2",
+    "index": "transcriptome/human_index",
+    "libType": "IU",
+    "mates1": "simulated_data/out_4/out_4/sample_02_1_shuffled.fa.gz",
+    "mates2": "simulated_data/out_4/out_4/sample_02_2_shuffled.fa.gz",
+    "threads": "6",
+    "gcBias": [],
+    "useBoth": [],
+    "vbPrior": "1e-3",
+    "validateMappings": [],
+    "output": "quants/out_4_02_quant_both_10^-3",
+    "auxDir": "aux_info"
+}
