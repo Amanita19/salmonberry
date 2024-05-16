@@ -1,0 +1,54 @@
+\begin{thebibliography}{10}
+
+\bibitem{noauthor_homo_sapiens_nodate}
+Homo\_sapiens - {Ensembl} genome browser 112.
+
+\bibitem{noauthor_salmon_nodate}
+Salmon 1.10.2 documentation.
+
+\bibitem{frazee2015polyester}
+Alyssa~C Frazee, Andrew~E Jaffe, Ben Langmead, and Jeffrey~T Leek.
+\newblock Polyester: simulating rna-seq datasets with differential transcript expression.
+\newblock {\em Bioinformatics}, 31(17):2778--2784, 2015.
+
+\bibitem{Glinos_et_al._2022}
+Dafni~A. Glinos, Garrett Garborcauskas, Paul Hoffman, Nava Ehsan, Lihua Jiang, Alper Gokden, Xiaoguang Dai, François Aguet, Kathleen~L. Brown, Kiran Garimella, and et~al.
+\newblock Transcriptome variation in human tissues revealed by long-read sequencing.
+\newblock {\em Nature}, 608(7922):353–359, Aug 2022.
+
+\bibitem{hoeting_bayesian_1999}
+Jennifer~A. Hoeting, David Madigan, Adrian~E. Raftery, and Chris~T. Volinsky.
+\newblock Bayesian model averaging: a tutorial (with comments by {M}. {Clyde}, {David} {Draper} and {E}. {I}. {George}, and a rejoinder by the authors.
+\newblock {\em Statistical Science}, 14(4):382--417, November 1999.
+
+\bibitem{judge_transcriptome_2022}
+Sean~J. Judge, Joshua~D. Bloomstein, Cyrus~J. Sholevar, Morgan~A. Darrow, Kevin~M. Stoffel, Logan~V. Vick, Cordelia Dunai, Sylvia~M. Cruz, Aryana~M. Razmara, Arta~M. Monjazeb, Robert~B. Rebhun, William~J. Murphy, and Robert~J. Canter.
+\newblock Transcriptome {Analysis} of {Tumor}-{Infiltrating} {Lymphocytes} {Identifies} {NK} {Cell} {Gene} {Signatures} {Associated} {With} {Lymphocyte} {Infiltration} and {Survival} in {Soft} {Tissue} {Sarcomas}.
+\newblock {\em Frontiers in Immunology}, 13:893177, 2022.
+
+\bibitem{love_swimming_2018}
+Michael~I. Love, Charlotte Soneson, and Rob Patro.
+\newblock Swimming downstream: statistical analysis of differential transcript usage following {Salmon} quantification.
+\newblock {\em F1000Research}, 7:952, October 2018.
+
+\bibitem{Pascal_et_al._2023}
+Corina Pascal, Jonathan Zonszain, Ofir Hameiri, Chen Gargi-Levi, Galit Lev-Maor, Luna Tammer, Tamar Levy, Anan Tarabeih, Vanessa~Rachel Roy, Stav Ben-Salmon, and et~al.
+\newblock Human histone h1 variants impact splicing outcome by controlling rna polymerase ii elongation.
+\newblock {\em Molecular Cell}, 83(21), Nov 2023.
+
+\bibitem{patro_salmon_2017}
+Rob Patro, Geet Duggal, Michael~I. Love, Rafael~A. Irizarry, and Carl Kingsford.
+\newblock Salmon provides fast and bias-aware quantification of transcript expression.
+\newblock {\em Nature Methods}, 14(4):417--419, April 2017.
+
+\bibitem{Pisu_Huang_Grenier_Russell_2020}
+Davide Pisu, Lu~Huang, Jennifer~K. Grenier, and David~G. Russell.
+\newblock Dual rna-seq of mtb-infected macrophages in vivo reveals ontologically distinct host-pathogen interactions.
+\newblock {\em Cell Reports}, 30(2), Jan 2020.
+
+\bibitem{Wang_Gerstein_Snyder_2009}
+Zhong Wang, Mark Gerstein, and Michael Snyder.
+\newblock Rna-seq: A revolutionary tool for transcriptomics.
+\newblock {\em Nature Reviews Genetics}, 10(1):57–63, Jan 2009.
+
+\end{thebibliography}
