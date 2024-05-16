@@ -1,4 +1,4 @@
-\section{Statistical Evaluation}
+\subsection{Statistical Evaluation}
 The statistical evaluation of the different inference algorithms was performed with R. 
 Because only the original simulated read counts were made available to, we conducted our comparisons on the estimated number of reads 
 given by Salmon. We chose two statistical metrics for our analysis:
@@ -17,14 +17,10 @@ where $x_i$ is the original simulated read count, and $y_i$ is the read count re
 \]
 The Spearman correlation, also described in the original publication, calculates the relationship between the rank for our results and the rank for the simulated data. It was computed through the core.test function where we indicated a two sided alternative hypothesis.
 
-
-\subsection{Spearman Correlation}
 \[
     \rho = 1 - \dfrac{6 \sum{d^2_i}}{n(n^2-1)}
 \]
-\subsection{Mann–Whitney U Test}
 
-MATH
 Additionally, we were also required to measure the differences between the three inference algorithms. 
 We used the Mann-Whitney test (also known as the Wilcoxon test) 
 to calculate the p value for such analysis, and computations were also performed in R 

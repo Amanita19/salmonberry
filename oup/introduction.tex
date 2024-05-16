@@ -5,7 +5,7 @@ which are often referred to as introns and exons. Prior to translation, transcri
 a process that revolves around the displacement of introns from the mRNA sequence. However, depending on environmental 
 conditions and sequence variations, some exons are often removed from the mRNA as well, eventually resulting in the creation of 
 a different protein isoform. Unfortunately, the many factors related to alternative splicing are still poorly understood for most 
-eukaryotic proteins, hence the reasoning behind the continuation of transcriptome projects.\\
+eukaryotic proteins, hence the reasoning behind the continuation of transcriptome projects.
 
 One essential facet to transcriptomics is the sequencing techniques used to generate transcript fragments for data analysis. 
 Prior approaches to transcriptome quantification involved the use of microarrays, which has important limitations such as relatively high 
@@ -16,14 +16,14 @@ high-throughput capabilities and the use of inexpensive technology. It has been 
 specifically with regards to eukaryotic cell transcriptomes. In particular, recent RNA-seq experiments yielded meaningful results in 
 quantifying expression difference across different tissues \cite{Glinos_et_al._2022}, distinguishing host-pathogen interactions 
 \cite{Pisu_Huang_Grenier_Russell_2020}, 
-and identifying the effect of structural variants on splicing regulators \cite{Pascal_et_al._2023}. \\
+and identifying the effect of structural variants on splicing regulators \cite{Pascal_et_al._2023}. 
 
-Equally important to transcriptomics is abundance quantification. Estimations can be done through an alignment to a 
+Equally important to transcriptomics is abundance quantifi-cation. Estimations can be done through an alignment to a 
 reference transcriptome sequence; nevertheless, a constant struggle with quantifying eukaryotic samples is to map read 
 fragments back to the original transcript as opposed to the original gene. Although the detection of protein family abundances 
 can be useful on its own, oftentimes researchers are more so interested in transcript abundances. Since isoforms of the same 
 protein will retain common exons, identifying the source of each read is a tedious process that requires 
-complex statistical methods.\\
+complex statistical methods.
 
 In the past, Salmon was developed to address this particular issue. Given a known transcript and a set of sequenced fragments, 
 it quantifies the relative abundance of each transcript in the sample using a dual-phase inference procedure. 
@@ -35,9 +35,116 @@ estimates without ground truth. Further, the choice of  Bayesian priors used in 
 A small prior leads to sparser results than EM. However, a larger prior may result in more estimated non-zero abundance than EM. 
 Prior simulated tests \cite{noauthor_salmon_nodate} show that VBEM with a small prior can lead to more accurate estimates. However, 
 there has been much research into improving the results of these algorithms such as model averaging \cite{hoeting_bayesian_1999}. 
+
 Given the trade offs of the two algorithms, we sought to know if the averaged prediction for EM and VBEM inference is better than 
 one algorithm or another. Further, if this ensemble estimate is better, could it be improved by varying the Bayesian priors.
-We have found that the average of these outputs did not result in conclusive results. \\
-
-We saw that using the average is very similar to EM when used with a higher prior and more similar to the VBEM output when used with 
+We find that a naive average of these outputs does not result in conclusive results. We saw that using the average is very similar to EM when used with a higher prior and more similar to the VBEM output when used with 
 a higher prior. In light of these results we have also included a section on future work. 
+
+\subsection{Salmon}
+Salmon uses a dual-phase inference procedure to provide fast and accurate estimates. 
+In an online and offline step, Salmon is able to calculate and improve the abundance 
+estimates for a transcript based on fragment GC-content and positional biases. 
+Salmon initially utilizes raw reads in a quasi-mapping phase where it performs direct 
+quantification instead of enacting a traditional alignment. 
+Salmon then moves to an online inference phase. 
+Here, Salmon uses a variant of stochastic, collapsed variational Bayesian inference to solve 
+a variation Bayesian inference problem. 
+In this phase, Salmon estimates the initial expression levels, auxiliary parameters, 
+the ‘foreground’ bias models, and fragment equivalence classes.In the offline phase, 
+Salmon improves the estimates it calculated in the online phase. Here, the user can 
+specify the inference algorithm of EM or VBEM. The chosen algorithm runs to convergence 
+on this data, outputting an optimized array of abundances. 
+Optionally, using the converged abundances and fragment equivalence classes, 
+Salmon can also draw and save estimates from the posterior distribution using Gibbs or bootstrap sampling. 
+\subsection{EM \& VBEM}
+
+The Expectation Maximization (EM) algorithm optimizes the likelihood of the parameters given the data. This algorithm returns a point estimate of the abundances. This algorithm was previously the default of Salmon, but preliminary results demonstrated that VBEM-inferred estimates tended to be more accurate \cite{noauthor_salmon_nodate}
+
+The Variational Bayesian Expectation Maximization (VBEM) algorithm accounts for the sparsity of the data. It takes a Bayesian nucleotide prior that controls for the sparsity of the data. The default prior for Salmon was $1 \times 10 ^{-2}$.
+
+Each transcriptome \(\mathcal{T}\) is composed of transcripts \(t\).
+Each transcript is a nucleotide sequence which can be described through
+its length \(l\), effective length \(\tilde l\), and its count
+\(c\)---which is the number of times that \(t\) occurs in a given
+sample. There are \(M\) transcripts in a given transcriptome.
+
+The probability that a given fragment originates from a transcript \(t\)
+depends on the length of that transcript relative to all other
+transcripts in the transcriptome. We define this nucleotide fraction
+\(\eta\) for a given transcript \(t\) as
+
+\[\eta_i= \dfrac{c_i \cdot \tilde l _i}{\sum^{M}_{\pmb{j} = 1}c_j \cdot \tilde l _j}\]
+
+We obtain a transcript fraction \(\tau\) for a given transcript \(t\) by
+normalizing its nucleotide fraction against the effective length of all
+transcripts.
+
+\[\eta_i= \dfrac{c_i \cdot \tilde l _i}{\sum^{M}_{\pmb{j} = 1}c_j \cdot \tilde l _j}\]
+
+Let's say that the true nucleotide fraction for a transcript \(t\) is
+\(\pmb{\eta}\). We can describe the probability of observing a set of
+sequenced fragments \(\mathcal{F}\) as a
+
+\[
+$$	
+\begin{align*}
+	\Pr\left( \mathcal{F}| \pmb{\eta}, Z, \mathcal{T} \right) &= \prod^{N}_{j=1} \Pr\left( f_j| \pmb{\eta}, Z, \mathcal{T} \right)\\
+	&= \prod^{N}_{j=1}\sum^{M}_{i=1} \Pr\left( t_i| \pmb{\eta} \cdot \Pr\left( f_j|t_i,z _{ij} =1 \right)  \right)
+\end{align*}
+$$
+\]
+
+where \(N\) is the number of fragments in \(\mathcal{F}\), \(Z\) is a
+relationship matrix where \(z _{ij} =1\) when fragment \(f_j\) is
+derived from \(t_i\).
+
+We want to obtain \(\pmb{\alpha}\), which is the estimated number of
+reads from each transcript. We describe the maximum likelihood estimates
+as:
+
+\[\mathcal{L} \left( \pmb{\alpha} |\mathcal{F}, \pmb{Z},\mathcal{T} \right)  = \prod^{N}_{j=1} \sum^{M}_{i=1} \hat \eta_i \Pr\left(  f_j|t_i\right)\]
+
+Written in terms of equivalence classes \(\pmb{C}\)
+
+\[\mathcal{L} \left( \pmb{\alpha} |\mathcal{F}, \pmb{Z},\mathcal{T} \right)  = \prod^{}_{\mathcal{C}^j \in \pmb{C}} \left( \sum_{t_i \in  \pmb{t}^j} \hat \eta_i w_t^j\right) ^{d^{j}}\]
+
+The abundances \(\pmb{\hat \eta}\) are computed directly from
+\(\pmb{\alpha}\)
+
+\[\hat \eta_i= \dfrac{\alpha_i}{\sum_j \alpha_j}\]
+
+Then we apply an update function
+
+\[\alpha_i ^{u+1} = \sum^{}_{\mathcal{C}^j \in \pmb{\mathcal{C}}} d ^{j} \left( \dfrac{\alpha_i^u w_i^j}{\sum^{}_{t_k \in \pmb{t}}} j \alpha^u_k w_k^j\right)\]
+
+Until the maximum relative difference in \( \pmb{\alpha}\) is
+
+\[\Delta \left( \alpha^u, \alpha ^{u+1} \right) = \mathrm{max} \dfrac{\left| a_i^u  - \alpha_i ^{u+1}\right| }{ \alpha_i ^{u+1}} < 1 \times 10 ^{-2}\]
+
+for all \(\alpha_i ^{u+1} > 1 \times 10 ^{-8}\), at which point we
+derive the estimated nucleotide fraction
+
+\[\hat \eta_i =\dfrac{\alpha_i ^{\prime} }{ \sum_j \alpha ^{\prime} _j}\]
+
+Variational Bayes Optimization
+
+Optionally, the we can apply variational bayeseian optimization where
+the update function is
+
+\[\alpha_i ^{u+1} = \sum^{}_{\mathcal{C}^j \in \pmb{\mathcal{C}}} d ^{j} \left( \dfrac{e ^{ \gamma ^u_i} e_i^j}{\sum^{}_{t_k \in \pmb{t}} j e ^{\gamma ^u _k}w^j_k} \right)\]
+
+where
+
+\[\gamma^u_i = \Psi \left( \sum^{M}_{k=1} \alpha^0_k + \alpha^u+_k \right)\]
+
+where \(\Psi\) is the digamma function and the expected value of
+nucleotide fractions can be expressed as
+\[
+$$
+\begin{align*}
+	\mathbb{E} \left( \eta_i \right) &= \dfrac{\alpha_i^0 + \alpha_i ^{\prime} }{\sum^{}_{j} \alpha^0_j + a ^{\prime} _j}= \dfrac{a_i^0 + \alpha_i ^{\prime} }{\hat \alpha^0 +N}\\
+	\hat \alpha^0 &= \sum^{M}_{i = 1} \alpha_i^0
+\end{align*}
+$$
+\]
