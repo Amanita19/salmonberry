@@ -7,7 +7,7 @@
 % line numbers
 %\usepackage[mathlines, switch]{lineno}
 %\usepackage[right]{lineno}
-
+\usepackage{svg}
 \theoremstyle{thmstyleone}%
 \newtheorem{theorem}{Theorem}%  meant for continuous numbers
 %%\newtheorem{theorem}{Theorem}[section]% meant for sectionwise numbers
@@ -33,38 +33,36 @@
 
 %\subtitle{Subject Section}
 
-\title[Short Article Title]{Article Title}
+\title[Final Paper]{Final Paper}
 
 \author[1]{Nathalie Bonin}
 \author[1]{Annie Dai}
 \author[1]{Emma Shroyer}
 
-\authormark{Author Name et al.}
+% \authormark{Author Name et al.}
 
 \address[1]{\orgdiv{Computer Science Department}, \orgname{University of Maryland}, \orgaddress{\state{Maryland}, \country{USA}}}
 
-\corresp[$\ast$]{Corresponding author. \href{email:email-id.com}{email-id.com}}
+% \corresp[$\ast$]{Corresponding author. \href{email:email-id.com}{email-id.com}}
 
 
 
 
-\abstract{Salmon provides a fast and accurate way to estimate transcript abundance. 
-This method uses a dual-phase inference algorithm and takes into account fragment biases for transcript verification. 
-However, there are some areas where Salmon could improve. \cite{Pascal_et_al._2023}
-The inference algorithms it uses, EM and VBEM, are only point estimates and cannot be checked if there is no ground truth available. 
-Further, the choice of prior when using the VBEM algorithm can affect the accuracy of the results. In this work, we test how averaging the inference model predictions affect the accuracy of the inference estimation during Salmon’s offline phase.}
+\abstract{Salmon provides a fast and accurate way to estimate transcript abundance. This method uses a dual-phase inference algorithm and takes into account fragment biases for transcript verification. However, there are some areas where Salmon could improve. The inference algorithms it uses, EM and VBEM, are only point estimates and cannot be checked if there is no ground truth available. Further, the choice of prior when using the VBEM algorithm can affect the accuracy of the results. In this work, we test how averaging the inference model predictions affect the accuracy of the inference estimation during Salmon’s offline phase. }
 \keywords{Salmon, Tuna, Onefish, Twofish, Redfish, Bluefish}
 
 
 \maketitle
-\input{background.tex}
+% \input{background.tex}
+\input{introduction.tex}
 \input{datasets.tex}
 \input{methods.tex}
-\input{experiments.tex}
+% \input{experiments.tex}
 \input{results.tex}
 \input{evaluation.tex}
 \input{discussion.tex}
-
+\input{future.tex}
+\input{supplementary.tex}
 
 
 \section{Author contributions statement}

@@ -1,6 +1,40 @@
 \section{Methods}
-We ran this on CBCB’s partion where we were able to allocate 5000 GB per run
-We began by reviewing and editing Salmon’s source code. A bash script was implemented to download our datasets. Another script was also written to run our samples using EM, VBEM, and a combination of the VBEM and EM algorithms. 
-First, we ran unaltered Salmon on our datasets using EM and VBEM. For each pass that used VBEM, we specified a prior 10-5 through 101. 
-We then ran the same datasets on Salmon using the average of both the EM and VBEM algorithms. We ran the EM and VBEM algorithms on the same data, producing an array. For each index in this array, the data was averaged and inserted into a new array for use in the final calculations. We again used priors of 10-5 through 101 when considering the VBEM algorithm. 
-Finally, we compared the results of these passes using the ground truth of the synthetic data. We calculated the MARD of our results. We also calculated the Spearman Correlation with a sample size of n1 = 24, n2 = 24, and a two-sided Mann-Whitney U test. 
+\subsection{Combining the traditional EM algorithm with the VBEM algorithm}
+Since we are only interested in optimizing abundance estimation in the offline phase, we opted to directly change Salmon v1.10.3’s 
+source code. We introduce a new flag, $\mathtt{--useBoth}$, which forces the program to run the offline phase twice: 
+once with the traditional EM algorithm and once with the VBEM algorithm. 
+The program then computes the average of the two different estimates for the $\pmb{\alpha}$ vector before computing its final 
+prediction for $\pmb{\eta}$.
+
+\subsection{Running the new implementation on the polyester dataset}
+The commands used for the quantification of each sample using EM, VBEM, or both inference strategies, are provided in Fig \ref{code}.
+\begin{figure*}[!t]%
+    \centering
+    {        
+        \begin{verbatim}
+        salmon quant -i human_index -l IU -1 sample_1.fa.gz -2 sample_2.fa.gz -p 6 --gcBias --useEM \
+            --validateMappings -o sample
+        salmon quant -i human_index -l IU -1 sample_1.fa.gz -2 sample_2.fa.gz -p 6 --gcBias --vbPrior \
+            1e{from -5 to 1} --validateMappings -o sample
+        salmon quant -i human_index -l IU -1 sample_1.fa.gz -2 sample_2.fa.gz -p 6 --gcBias --useBoth \
+            --vbPrior 1e{from -5 to 1} --validateMappings -o sample
+    \end{verbatim}
+    }
+    \caption{Commands used for the quantification of each sample using EM, VBEM, or both inference strategies, respectively.}
+    \label{code}
+\end{figure*}
+
+Quantification was run on the 24 samples through a slurm batch script. 
+For each run, 5GB of memory was allocated on the CBCB’s Nexus partition. 
+In total, every sample had 15 runs, each with different specifications for the inference method (1 EM, 7 VBEM, and 7 combo) 
+and the prior value if applicable ($10^{-5}$ to $10^1$).  All other parameters were kept the same among the 360 total runs: 
+\begin{enumerate}
+    \item We kept the selective alignment feature on for this experiment. This strategy is currently the default for the pipeline, 
+    and it allows Salmon to adopt a more sensitive approach during quasi-mapping.
+    \item In recent versions of Salmon, the library type can be automatically detected. Nevertheless, we elected to 
+    specify the library type for all the runs.
+    \item The $\mathtt{–gcBias}$ flag was passed to the pipeline as well, which allows Salmon to identify and  remedy for 
+    GC biases. This extra step is essential for the analysis of our synthetic data since they were simulated from an already 
+    existing GC bias profile \cite{love_swimming_2018}.
+    
+\end{enumerate}

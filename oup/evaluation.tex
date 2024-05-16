@@ -1,16 +1,31 @@
-\section{Evaluation}
+\section{Statistical Evaluation}
+The statistical evaluation of the different inference algorithms was performed with R. 
+Because only the original simulated read counts were made available to, we conducted our comparisons on the estimated number of reads 
+given by Salmon. We chose two statistical metrics for our analysis:
+The mean absolute relative difference, or $\mathrm{MARD}$, 
+was already introduced in the original Salmon publication. 
+It is the average of the absolute relative difference $\mathrm{ARD}$ for each transcript $i$, 
+where $x_i$ is the original simulated read count, and $y_i$ is the read count reported by Salmon.
 \[
     \mathrm{ARD}_i = \begin{cases}
         0 &\quad\text{if}\quad x_i = y_i = 0\\
         \dfrac{\left| x_i-y_i \right| }{x_i-y_i} &\quad\text{otherwise}\quad
     \end{cases}
 \]
-
 \[
     \mathrm{MARD} = \frac{1}{M} \sum^{M}_{i = 1}\mathrm{ARD}_i
 \]
+The Spearman correlation, also described in the original publication, calculates the relationship between the rank for our results and the rank for the simulated data. It was computed through the core.test function where we indicated a two sided alternative hypothesis.
+
+
 \subsection{Spearman Correlation}
 \[
     \rho = 1 - \dfrac{6 \sum{d^2_i}}{n(n^2-1)}
 \]
 \subsection{Mann–Whitney U Test}
+
+MATH
+Additionally, we were also required to measure the differences between the three inference algorithms. 
+We used the Mann-Whitney test (also known as the Wilcoxon test) 
+to calculate the p value for such analysis, and computations were also performed in R 
+with the wilcox.test function

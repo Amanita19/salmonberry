@@ -1,1 +1,43 @@
 \section{Introduction}
+
+A key characteristic of many newly-formed eukaryotic RNA sequences is the inclusion of non-coding and coding regions, 
+which are often referred to as introns and exons. Prior to translation, transcript maturation must occur via splicing, 
+a process that revolves around the displacement of introns from the mRNA sequence. However, depending on environmental 
+conditions and sequence variations, some exons are often removed from the mRNA as well, eventually resulting in the creation of 
+a different protein isoform. Unfortunately, the many factors related to alternative splicing are still poorly understood for most 
+eukaryotic proteins, hence the reasoning behind the continuation of transcriptome projects.\\
+
+One essential facet to transcriptomics is the sequencing techniques used to generate transcript fragments for data analysis. 
+Prior approaches to transcriptome quantification involved the use of microarrays, which has important limitations such as relatively high 
+risks of cross-hybridization, low range of detection, and complicated normalization methods for differential expression analysis 
+\cite{Wang_Gerstein_Snyder_2009}. 
+RNA-Seq, on the other hand, does not face such limitations and retains microarrays’ advantage over classical sequencing such as 
+high-throughput capabilities and the use of inexpensive technology. It has been revolutionary in furthering the field of transcriptomics,
+specifically with regards to eukaryotic cell transcriptomes. In particular, recent RNA-seq experiments yielded meaningful results in 
+quantifying expression difference across different tissues \cite{Glinos_et_al._2022}, distinguishing host-pathogen interactions 
+\cite{Pisu_Huang_Grenier_Russell_2020}, 
+and identifying the effect of structural variants on splicing regulators \cite{Pascal_et_al._2023}. \\
+
+Equally important to transcriptomics is abundance quantification. Estimations can be done through an alignment to a 
+reference transcriptome sequence; nevertheless, a constant struggle with quantifying eukaryotic samples is to map read 
+fragments back to the original transcript as opposed to the original gene. Although the detection of protein family abundances 
+can be useful on its own, oftentimes researchers are more so interested in transcript abundances. Since isoforms of the same 
+protein will retain common exons, identifying the source of each read is a tedious process that requires 
+complex statistical methods.\\
+
+In the past, Salmon was developed to address this particular issue. Given a known transcript and a set of sequenced fragments, 
+it quantifies the relative abundance of each transcript in the sample using a dual-phase inference procedure. 
+Salmon improves accuracy compared to other models, because it takes into account sample-specific biases to improve accuracy. 
+When these biases are not accounted for, calculations like the false discovery rate cannot be controlled for. 
+Using multiple inference steps, Salmon improves its abundance estimates using either the VBEM or EM inference algorithms. 
+However, both methods have drawbacks. Both algorithms return point estimates of abundances, and we are uncertain about the returned 
+estimates without ground truth. Further, the choice of  Bayesian priors used in the VBEM algorithm also has considerations. 
+A small prior leads to sparser results than EM. However, a larger prior may result in more estimated non-zero abundance than EM. 
+Prior simulated tests \cite{noauthor_salmon_nodate} show that VBEM with a small prior can lead to more accurate estimates. However, 
+there has been much research into improving the results of these algorithms such as model averaging \cite{hoeting_bayesian_1999}. 
+Given the trade offs of the two algorithms, we sought to know if the averaged prediction for EM and VBEM inference is better than 
+one algorithm or another. Further, if this ensemble estimate is better, could it be improved by varying the Bayesian priors.
+We have found that the average of these outputs did not result in conclusive results. \\
+
+We saw that using the average is very similar to EM when used with a higher prior and more similar to the VBEM output when used with 
+a higher prior. In light of these results we have also included a section on future work. 

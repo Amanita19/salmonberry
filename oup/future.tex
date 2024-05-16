@@ -1,0 +1,32 @@
+\section{Future Work}
+In our results we saw that using the average of both VBEM and EM is very similar to EM 
+when used with a lower prior and more similar to the VBEM output when used with a higher prior. 
+We have hypothesized this is because we were taking the average even when one of the results was a 
+zero. In future work, we would like to prioritize zero abundances over non-zero abundances. 
+Instead of taking the average between value and zero, we want to record the value as zero. 
+If neither result is a zero, we wish to take the average of those values. 
+We believe this could improve our estimates. 
+
+In the current timeframe, we were unable to expand on our projec, but in future work, 
+would like to expand upon ways to best combine the results of the EM and VBEM algorithms. 
+Currently, our code is only taking the mean of the two results. 
+However, we would also like to experiment with the weighted average or the Bayesian model average 
+of these two algorithms also taking into account various prior sizes. 
+We hypothesize that this would further improve Salmon’s results \cite{patro_salmon_2017}. 
+Additionally, we also would like to test our approach on real life data. 
+Although we had picked out a dataset consisting of sequencing reads from NK cells, T cells, 
+and tumor collected from matched soft tissue sarcoma and peripheral blood \cite{judge_transcriptome_2022}, we were pressed 
+for time and resources, and therefore we had to abandon this portion of our project.
+
+We would also like to verify the time it takes to run our combined approach. 
+It would be beneficial to run multiple trials to gain an idea of the time it takes to run 
+Salmon using our solution. We would like to verify that running this approach will not greatly 
+impact the runtime of Salmon. The runtime is expected to increase, since we are running both the 
+EM and VBEM algorithms. However, we would like to verify that it is not detrimental to the use 
+of Salmon. 
+
+In future work, it will be informative to get a measure of uncertainty when running our trials. 
+We were unable to run this during our initial experiments. However, we would like to know if there 
+is a level of uncertainty with our results when we use the average of the EM and VBEM algorithms. 
+We would like to know if this uncertainty increases or decreases, and if so, is the change in 
+uncertainty significantly. Salmon already supports this analysis through the use of a flag. 
