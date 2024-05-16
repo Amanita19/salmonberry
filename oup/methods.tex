@@ -1,7 +1,7 @@
 \section{Methods}
 \subsection{Combining the traditional EM algorithm with the VBEM algorithm}
 Since we are only interested in optimizing abundance estimation in the offline phase, we opted to directly change Salmon v1.10.3’s 
-source code. We introduce a new flag, $\mathtt{--useBoth}$, which forces the program to run the offline phase twice: 
+source code. We introduce a new flag, $\mathtt{\-\-useBoth}$, which forces the program to run the offline phase twice: 
 once with the traditional EM algorithm and once with the VBEM algorithm. 
 The program then computes the average of the two different estimates for the $\pmb{\alpha}$ vector before computing its final 
 prediction for $\pmb{\eta}$.
